@@ -18,8 +18,8 @@ const sizeMap: Record<string, string> = {
 };
 
 const colorMap: Record<string, string> = {
-  "coral-light": "#E69C83",
-  "mint-soft": "#A8E7CD",
+  "coral-light": "#F08A60",
+  "mint-soft": "#7DCCA5",
 };
 
 /* Pre-defined organic blob paths */

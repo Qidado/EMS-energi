@@ -11,7 +11,7 @@ interface WavyLinesProps {
 
 export default function WavyLines({
   lines = 3,
-  color = "#E69C83",
+  color = "#F08A60",
   className = "",
 }: WavyLinesProps) {
   const lineSpacing = 8;

@@ -2,22 +2,22 @@
 
 @theme inline {
   /* Primary colors */
-  --color-coral: #E77054;
-  --color-coral-light: #E69C83;
-  --color-coral-dark: #D14F30;
-  --color-teal: #64A881;
-  --color-teal-dark: #2E6F4D;
-  --color-teal-light: #8DCEAD;
+  --color-coral: #E85D3B;
+  --color-coral-light: #F08A60;
+  --color-coral-dark: #C94A28;
+  --color-teal: #2D5A3D;
+  --color-teal-dark: #1E4A2D;
+  --color-teal-light: #4A8A63;
 
   /* Neutral / background colors */
-  --color-cream: #F5F5ED;
-  --color-cream-light: #FAFAF7;
-  --color-cream-dark: #EDEDDF;
-  --color-peach: #F8DAC5;
-  --color-peach-light: #FCE8DB;
-  --color-peach-dark: #F4C9AB;
-  --color-mint-light: #DCF5EB;
-  --color-mint-soft: #A8E7CD;
+  --color-cream: #F5F5F3;
+  --color-cream-light: #FAFAFA;
+  --color-cream-dark: #EBEBEB;
+  --color-peach: #F0EDE8;
+  --color-peach-light: #F5F3F0;
+  --color-peach-dark: #E5E2DE;
+  --color-mint-light: #E0F0E8;
+  --color-mint-soft: #7DCCA5;
 
   /* Gray scale (geometric / fintech palette) */
   --color-gray-100: #F4F4F5;
@@ -42,10 +42,10 @@
   --color-white: #FFFFFF;
 
   /* Legacy aliases for smooth migration */
-  --color-background: #F5F5ED;
+  --color-background: #F5F5F3;
   --color-foreground: #000000;
   --color-text-muted: #333333;
-  --color-divider: #EDEDDF;
+  --color-divider: #EBEBEB;
 
   /* Fonts */
   --font-heading: var(--font-playfair);

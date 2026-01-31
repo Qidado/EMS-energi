@@ -10,7 +10,7 @@ interface QuoteMarkProps {
 }
 
 export default function QuoteMark({
-  color = "#E77054",
+  color = "#E85D3B",
   size = "6rem",
   className = "",
 }: QuoteMarkProps) {

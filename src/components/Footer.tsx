@@ -138,7 +138,7 @@ export default function Footer() {
 
   return (
     <>
-      <WaveDivider color="#64A881" />
+      <WaveDivider color="#2D5A3D" />
       <footer className="bg-teal border-t border-teal-dark">
         <div className="max-w-7xl mx-auto py-16 px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
