@@ -10,7 +10,8 @@ export interface NavLink {
 export interface Testimonial {
   quote: string;
   name: string;
-  detail: string;
+  role: string;
+  memberSince: string;
 }
 
 export interface PricingPlan {

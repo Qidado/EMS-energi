@@ -78,15 +78,15 @@ function ChevronIcon({ open }: { open: boolean }) {
 }
 
 const footerTraening = [
-  { href: "/", label: "EMS Tr\u00e6ning" },
-  { href: "/", label: "Holdoversigt" },
-  { href: "/", label: "Personlig Tr\u00e6ning" },
+  { href: "#hvad-er-ems", label: "EMS Træning" },
+  { href: "#din-foerste-session", label: "Holdoversigt" },
 ];
 
 const footerInfo = [
-  { href: "/om-os", label: "Om Os" },
-  { href: "/priser", label: "Priser" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "#hvad-er-ems", label: "Om Os" },
+  { href: "#priser", label: "Priser" },
+  { href: "#find-os", label: "Kontakt" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 const footerLegal = [
@@ -107,7 +107,7 @@ function AccordionColumn({ title, children, open, onToggle }: AccordionColumnPro
     <div>
       <button
         type="button"
-        className="flex w-full items-center justify-between sm:pointer-events-none sm:cursor-default"
+        className="flex w-full items-center justify-between py-3 sm:py-0 sm:pointer-events-none sm:cursor-default"
         onClick={onToggle}
         aria-expanded={open}
       >
@@ -138,8 +138,8 @@ export default function Footer() {
 
   return (
     <>
-      <WaveDivider color="#2D5A3D" />
-      <footer className="bg-teal border-t border-teal-dark">
+      <WaveDivider color="#1A3D2E" />
+      <footer className="bg-forest-green border-t border-forest-green">
         <div className="max-w-7xl mx-auto py-16 px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
             {/* Col 1: Brand */}
@@ -152,28 +152,28 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-coral transition-colors duration-200"
+                  className="text-white/70 hover:text-signal-orange transition-colors duration-200"
                   aria-label="Instagram"
                 >
                   <InstagramIcon />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://facebook.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-coral transition-colors duration-200"
+                  className="text-white/70 hover:text-signal-orange transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <FacebookIcon />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/company/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-coral transition-colors duration-200"
+                  className="text-white/70 hover:text-signal-orange transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <LinkedInIcon />
@@ -235,10 +235,10 @@ export default function Footer() {
                 </p>
                 <p>
                   <a
-                    href="tel:+4531425364"
+                    href="tel:+45XXXXXXXX"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    Tlf: +45 31 42 53 64
+                    Tlf: +45 XX XX XX XX
                   </a>
                 </p>
                 <p>

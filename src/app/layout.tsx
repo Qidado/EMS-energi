@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da">
-      <body className={`${playfair.variable} antialiased`}>
+      <body className={`${fraunces.variable} ${jakarta.variable} antialiased`}>
         {children}
       </body>
     </html>

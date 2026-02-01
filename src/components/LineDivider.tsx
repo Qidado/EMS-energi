@@ -26,7 +26,7 @@ export default function LineDivider({
         className={`h-px w-full ${spacingMap[spacing]} ${className}`}
         style={{
           background:
-            "linear-gradient(to right, transparent, #D4D4D8 30%, #D4D4D8 70%, transparent)",
+            "linear-gradient(to right, transparent, #D4D1CC 30%, #D4D1CC 70%, transparent)",
         }}
         role="separator"
       />
@@ -38,12 +38,12 @@ export default function LineDivider({
       className={`w-full border-0 ${spacingMap[spacing]} ${className}`}
       style={{
         height: "1px",
-        backgroundColor: "#D4D4D8",
+        backgroundColor: "#D4D1CC",
         ...(variant === "dashed"
           ? {
               backgroundColor: "transparent",
               backgroundImage:
-                "repeating-linear-gradient(to right, #D4D4D8, #D4D4D8 6px, transparent 6px, transparent 12px)",
+                "repeating-linear-gradient(to right, #D4D1CC, #D4D1CC 6px, transparent 6px, transparent 12px)",
             }
           : {}),
       }}

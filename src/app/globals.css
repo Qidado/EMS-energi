@@ -2,56 +2,43 @@
 
 @theme inline {
   /* Primary colors */
-  --color-coral: #E85D3B;
-  --color-coral-light: #F08A60;
-  --color-coral-dark: #C94A28;
-  --color-teal: #2D5A3D;
-  --color-teal-dark: #1E4A2D;
-  --color-teal-light: #4A8A63;
+  --color-signal-orange: #FF5A00;
+  --color-orange-hover: #E54E00;
+  --color-forest-green: #1A3D2E;
+  --color-green-light: #2D5A3D;
 
   /* Neutral / background colors */
-  --color-cream: #F5F5F3;
-  --color-cream-light: #FAFAFA;
-  --color-cream-dark: #EBEBEB;
-  --color-peach: #F0EDE8;
-  --color-peach-light: #F5F3F0;
-  --color-peach-dark: #E5E2DE;
-  --color-mint-light: #E0F0E8;
-  --color-mint-soft: #7DCCA5;
+  --color-off-white: #FAFAFA;
+  --color-warm-grey: #E8E6E3;
+  --color-warm-grey-dark: #D4D1CC;
 
-  /* Gray scale (geometric / fintech palette) */
-  --color-gray-100: #F4F4F5;
-  --color-gray-200: #E4E4E7;
-  --color-gray-300: #D4D4D8;
-  --color-gray-400: #A1A1AA;
-  --color-gray-500: #71717A;
-  --color-gray-600: #52525B;
-  --color-gray-900: #18181B;
-
-  /* Accent (indigo) */
-  --color-accent: #6366F1;
-  --color-accent-muted: #E0E7FF;
+  /* Text colors */
+  --color-black: #0A0A0A;
+  --color-secondary: #4A4A4A;
+  --color-muted: #6B6B6B;
+  --color-white: #FFFFFF;
 
   /* Status colors */
   --color-success: #10B981;
   --color-warning: #F59E0B;
 
-  /* Text colors */
-  --color-black: #000000;
-  --color-gray-dark: #333333;
-  --color-white: #FFFFFF;
-
-  /* Legacy aliases for smooth migration */
-  --color-background: #F5F5F3;
-  --color-foreground: #000000;
-  --color-text-muted: #333333;
-  --color-divider: #EBEBEB;
+  /* Legacy aliases */
+  --color-background: #FAFAFA;
+  --color-foreground: #0A0A0A;
+  --color-text-muted: #4A4A4A;
+  --color-divider: #D4D1CC;
 
   /* Fonts */
-  --font-heading: var(--font-playfair);
-  --font-body: "Verdana", "Helvetica", "Arial", sans-serif;
-  --font-serif: var(--font-playfair);
-  --font-sans: "Verdana", "Helvetica", "Arial", sans-serif;
+  --font-heading: var(--font-fraunces);
+  --font-body: var(--font-jakarta);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
 }
 
 /* ============================================
@@ -60,11 +47,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   body {
-    background: var(--color-cream);
-    color: var(--color-gray-dark);
+    background: var(--color-off-white);
+    color: var(--color-secondary);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
@@ -86,20 +74,20 @@
   small, .text-small { font-size: 14px; }
 
   /* Heading utility classes */
-  .heading-coral {
+  .heading-orange {
     font-family: var(--font-heading), "Georgia", serif;
     font-style: italic;
-    color: var(--color-coral);
+    color: var(--color-signal-orange);
   }
 
-  .heading-teal {
+  .heading-green {
     font-family: var(--font-heading), "Georgia", serif;
     font-style: italic;
-    color: var(--color-teal);
+    color: var(--color-forest-green);
   }
 
   a {
-    color: var(--color-coral);
+    color: var(--color-signal-orange);
     transition: color 200ms ease-out;
   }
 
@@ -108,13 +96,13 @@
   }
 
   ::selection {
-    background-color: var(--color-peach);
+    background-color: var(--color-warm-grey);
     color: var(--color-black);
   }
 
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-cream), 0 0 0 4px var(--color-coral);
+    box-shadow: 0 0 0 2px var(--color-off-white), 0 0 0 4px var(--color-signal-orange);
   }
 }
 
@@ -162,9 +150,9 @@
    SCROLLBAR
    ============================================ */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--color-cream); }
-::-webkit-scrollbar-thumb { background: var(--color-coral-light); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-coral); }
+::-webkit-scrollbar-track { background: var(--color-off-white); }
+::-webkit-scrollbar-thumb { background: var(--color-warm-grey-dark); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-signal-orange); }
 
 /* ============================================
    REDUCED MOTION

@@ -18,7 +18,7 @@ const paths: Record<string, string> = {
 };
 
 export default function WaveDivider({
-  color = "#F0EDE8",
+  color = "#E8E6E3",
   flip = false,
   variant = "gentle",
   className = "",

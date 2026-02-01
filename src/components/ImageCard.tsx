@@ -9,15 +9,15 @@ interface ImageCardProps {
   subtitle?: string;
   href?: string;
   imageSrc?: string;
-  /** Title color — defaults to mint-soft */
-  titleColor?: "mint" | "coral" | "teal" | "white";
+  /** Title color — defaults to green-light */
+  titleColor?: "green" | "orange" | "forest" | "white";
   className?: string;
 }
 
 const titleColorMap: Record<string, string> = {
-  mint: "text-mint-soft",
-  coral: "text-coral",
-  teal: "text-teal",
+  green: "text-green-light",
+  orange: "text-signal-orange",
+  forest: "text-forest-green",
   white: "text-white",
 };
 
@@ -30,12 +30,12 @@ export default function ImageCard({
   subtitle,
   href,
   imageSrc,
-  titleColor = "mint",
+  titleColor = "green",
   className = "",
 }: ImageCardProps) {
   const card = (
     <div
-      className={`group relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-2xl bg-peach ${className}`}
+      className={`group relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-xl bg-warm-grey ${className}`}
     >
       {/* Background image */}
       {imageSrc && (
@@ -72,12 +72,12 @@ export default function ImageCard({
       )}
 
       {subtitle && (
-        <p className="mt-3 text-sm text-gray-dark">
+        <p className="mt-3 text-sm text-secondary">
           {subtitle}
           {href && (
             <Link
               href={href}
-              className="ml-2 font-medium text-coral transition-colors hover:underline"
+              className="ml-2 font-medium text-signal-orange transition-colors hover:underline"
             >
               Læs mere &rarr;
             </Link>

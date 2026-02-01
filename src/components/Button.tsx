@@ -35,11 +35,11 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-coral text-cream hover:bg-coral-dark hover:shadow-lg hover:-translate-y-0.5",
+    "bg-signal-orange text-white hover:bg-orange-hover hover:shadow-lg hover:-translate-y-0.5",
   secondary:
-    "bg-teal text-white hover:bg-teal-dark hover:shadow-lg hover:-translate-y-0.5",
+    "bg-forest-green text-white hover:bg-green-light hover:shadow-lg hover:-translate-y-0.5",
   outline:
-    "bg-transparent border-2 border-coral text-coral hover:bg-coral hover:text-cream hover:-translate-y-0.5",
+    "bg-transparent border-2 border-signal-orange text-signal-orange hover:bg-signal-orange hover:text-white hover:-translate-y-0.5",
 };
 
 const sizeStyles: Record<Size, string> = {
@@ -90,7 +90,7 @@ const Button = forwardRef<
   } = props;
 
   const base =
-    "group inline-flex items-center justify-center rounded-full font-medium uppercase tracking-wider transition-all duration-200 cursor-pointer";
+    "group inline-flex items-center justify-center rounded-lg font-medium tracking-wider transition-all duration-200 cursor-pointer";
 
   const classes = `${base} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 

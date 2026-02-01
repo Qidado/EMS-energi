@@ -1,26 +1,15 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 /* ============================================
    Types
    ============================================ */
 
-interface DropdownItem {
-  href: string;
-  label: string;
-}
-
-interface DropdownSection {
-  title?: string;
-  items: DropdownItem[];
-}
-
 interface NavItem {
   href: string;
   label: string;
-  dropdown?: DropdownSection[];
 }
 
 /* ============================================
@@ -28,28 +17,11 @@ interface NavItem {
    ============================================ */
 
 const navLinks: NavItem[] = [
-  {
-    href: "/om-os",
-    label: "Om Os",
-    dropdown: [
-      {
-        title: "Lær os at kende",
-        items: [
-          { href: "/om-os", label: "Vores historie" },
-          { href: "/om-os#team", label: "Mød teamet" },
-        ],
-      },
-      {
-        title: "EMS Træning",
-        items: [
-          { href: "/om-os#teknologi", label: "Hvad er EMS?" },
-          { href: "/om-os#vaerdier", label: "Vores værdier" },
-        ],
-      },
-    ],
-  },
-  { href: "/priser", label: "Priser" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "#hvad-er-ems", label: "Om EMS" },
+  { href: "#din-foerste-session", label: "Sådan virker det" },
+  { href: "#priser", label: "Priser" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#find-os", label: "Kontakt" },
 ];
 
 /* ============================================
@@ -85,66 +57,6 @@ function LinkedInIcon() {
 }
 
 /* ============================================
-   Dropdown component
-   ============================================ */
-
-function NavDropdown({
-  sections,
-  open,
-  onClose,
-}: {
-  sections: DropdownSection[];
-  open: boolean;
-  onClose: () => void;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        onClose();
-      }
-    }
-    if (open) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [open, onClose]);
-
-  if (!open) return null;
-
-  return (
-    <div
-      ref={ref}
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 rounded-xl border border-cream-dark bg-white p-4 shadow-lg"
-    >
-      {sections.map((section, sIdx) => (
-        <div key={sIdx} className={sIdx > 0 ? "mt-4 pt-4 border-t border-cream-dark" : ""}>
-          {section.title && (
-            <p className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-dark">
-              {section.title}
-            </p>
-          )}
-          <ul className="space-y-1">
-            {section.items.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={onClose}
-                  className="block rounded-lg px-3 py-2 text-sm text-gray-dark transition-colors hover:bg-cream hover:text-black"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/* ============================================
    Navigation
    ============================================ */
 
@@ -152,7 +64,6 @@ export default function Navigation() {
   const [announcementVisible, setAnnouncementVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -169,10 +80,10 @@ export default function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement Bar */}
       {announcementVisible && (
-        <div className="bg-peach py-2.5 px-4 text-center relative">
+        <div className="bg-warm-grey py-2.5 px-4 text-center relative">
           <Link
-            href="/kontakt"
-            className="text-black text-sm hover:text-coral transition-colors duration-200"
+            href="#find-os"
+            className="text-black text-sm hover:text-signal-orange transition-colors duration-200"
           >
             Pr&oslash;v EMS &mdash; F&oslash;rste tr&aelig;ning gratis! &rarr;
           </Link>
@@ -190,7 +101,7 @@ export default function Navigation() {
 
       {/* Main Navigation */}
       <nav
-        className={`bg-white border-b border-cream-dark transition-shadow duration-300 ${
+        className={`bg-white border-b border-warm-grey-dark transition-shadow duration-300 ${
           scrolled ? "shadow-sm" : "shadow-none"
         }`}
       >
@@ -206,68 +117,33 @@ export default function Navigation() {
             {/* Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <div key={link.href} className="relative">
-                  {link.dropdown ? (
-                    <button
-                      onClick={() =>
-                        setOpenDropdown(openDropdown === link.href ? null : link.href)
-                      }
-                      className="flex items-center gap-1 text-base text-gray-dark hover:text-black transition-colors duration-200"
-                      aria-expanded={openDropdown === link.href}
-                    >
-                      {link.label}
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        className={`transition-transform duration-200 ${
-                          openDropdown === link.href ? "rotate-180" : ""
-                        }`}
-                      >
-                        <path d="M3 5l3 3 3-3" />
-                      </svg>
-                    </button>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="text-base text-gray-dark hover:text-black transition-colors duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  )}
-
-                  {link.dropdown && (
-                    <NavDropdown
-                      sections={link.dropdown}
-                      open={openDropdown === link.href}
-                      onClose={() => setOpenDropdown(null)}
-                    />
-                  )}
-                </div>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-base text-secondary hover:text-black transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
 
             {/* Desktop Right — Social + CTA */}
             <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-2 text-gray-dark">
-                <a href="https://instagram.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 hover:text-coral transition-colors">
+              <div className="flex items-center gap-2 text-secondary">
+                <a href="https://instagram.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 hover:text-signal-orange transition-colors">
                   <InstagramIcon />
                 </a>
-                <a href="https://facebook.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-1.5 hover:text-coral transition-colors">
+                <a href="https://facebook.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-1.5 hover:text-signal-orange transition-colors">
                   <FacebookIcon />
                 </a>
-                <a href="https://linkedin.com/company/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 hover:text-coral transition-colors">
+                <a href="https://linkedin.com/company/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 hover:text-signal-orange transition-colors">
                   <LinkedInIcon />
                 </a>
               </div>
 
               <Link
-                href="/kontakt"
-                className="bg-coral text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-coral-dark transition-colors duration-200"
+                href="#find-os"
+                className="bg-signal-orange text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:bg-orange-hover transition-colors duration-200"
               >
                 Book Tr&aelig;ning
               </Link>
@@ -276,7 +152,7 @@ export default function Navigation() {
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-black hover:text-gray-dark transition-colors duration-200"
+              className="md:hidden p-2 text-black hover:text-secondary transition-colors duration-200"
               aria-label={mobileMenuOpen ? "Luk menu" : "Åbn menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -300,56 +176,40 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-cream-dark ${
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-warm-grey-dark ${
             mobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-6 py-6 space-y-1">
             {navLinks.map((link) => (
-              <div key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block text-base text-gray-dark hover:text-black transition-colors duration-200 py-3"
-                >
-                  {link.label}
-                </Link>
-                {/* Mobile dropdown items inline */}
-                {link.dropdown && (
-                  <div className="pl-4 space-y-1">
-                    {link.dropdown.flatMap((s) => s.items).map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block text-sm text-gray-dark/70 hover:text-black transition-colors duration-200 py-2"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-base text-secondary hover:text-black transition-colors duration-200 py-3"
+              >
+                {link.label}
+              </Link>
             ))}
 
             {/* Mobile Social */}
-            <div className="flex items-center gap-3 pt-4 text-gray-dark">
-              <a href="https://instagram.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 hover:text-coral transition-colors">
+            <div className="flex items-center gap-3 pt-4 text-secondary">
+              <a href="https://instagram.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 hover:text-signal-orange transition-colors">
                 <InstagramIcon />
               </a>
-              <a href="https://facebook.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-1.5 hover:text-coral transition-colors">
+              <a href="https://facebook.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-1.5 hover:text-signal-orange transition-colors">
                 <FacebookIcon />
               </a>
-              <a href="https://linkedin.com/company/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 hover:text-coral transition-colors">
+              <a href="https://linkedin.com/company/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 hover:text-signal-orange transition-colors">
                 <LinkedInIcon />
               </a>
             </div>
 
             <div className="pt-4">
               <Link
-                href="/kontakt"
+                href="#find-os"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block bg-coral text-white text-sm font-medium px-5 py-3 rounded-full text-center hover:bg-coral-dark transition-colors duration-200"
+                className="block bg-signal-orange text-white text-sm font-medium px-5 py-3 rounded-lg text-center hover:bg-orange-hover transition-colors duration-200"
               >
                 Book Tr&aelig;ning
               </Link>

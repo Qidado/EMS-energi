@@ -1,6 +1,6 @@
 /* ============================================
    QuoteMark — Large decorative opening quote
-   Coral color, Playfair Display, 6rem
+   Orange (#FF5A00), serif font, 6rem
    ============================================ */
 
 interface QuoteMarkProps {
@@ -10,7 +10,7 @@ interface QuoteMarkProps {
 }
 
 export default function QuoteMark({
-  color = "#E85D3B",
+  color = "#FF5A00",
   size = "6rem",
   className = "",
 }: QuoteMarkProps) {

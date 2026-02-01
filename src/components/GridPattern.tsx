@@ -32,7 +32,7 @@ export default function GridPattern({
           patternUnits="userSpaceOnUse"
         >
           {variant === "dots" ? (
-            <circle cx={spacing / 2} cy={spacing / 2} r={1} fill="#D4D4D8" />
+            <circle cx={spacing / 2} cy={spacing / 2} r={1} fill="#D4D1CC" />
           ) : (
             <>
               <line
@@ -40,7 +40,7 @@ export default function GridPattern({
                 y1={0}
                 x2={spacing}
                 y2={spacing}
-                stroke="#E4E4E7"
+                stroke="#E8E6E3"
                 strokeWidth={0.5}
               />
               <line
@@ -48,7 +48,7 @@ export default function GridPattern({
                 y1={spacing}
                 x2={spacing}
                 y2={spacing}
-                stroke="#E4E4E7"
+                stroke="#E8E6E3"
                 strokeWidth={0.5}
               />
             </>

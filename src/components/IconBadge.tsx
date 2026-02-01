@@ -6,7 +6,7 @@
 
 interface IconBadgeProps {
   icon: React.ReactNode;
-  variant?: "default" | "accent";
+  variant?: "default" | "orange";
   size?: "sm" | "md" | "lg";
   className?: string;
 }
@@ -19,7 +19,7 @@ const sizeMap: Record<string, { container: string; icon: string }> = {
 
 const variantMap: Record<string, { bg: string; text: string }> = {
   default: { bg: "bg-gray-100", text: "text-gray-600" },
-  accent: { bg: "bg-accent-muted", text: "text-accent" },
+  orange: { bg: "bg-signal-orange/10", text: "text-signal-orange" },
 };
 
 export default function IconBadge({

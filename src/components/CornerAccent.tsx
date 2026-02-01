@@ -18,7 +18,7 @@ const sizeMap: Record<string, number> = {
 export default function CornerAccent({
   position = "top-left",
   size = "sm",
-  color = "#D4D4D8",
+  color = "#D4D1CC",
   className = "",
 }: CornerAccentProps) {
   const s = sizeMap[size];

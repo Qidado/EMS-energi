@@ -33,16 +33,16 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative flex h-full flex-col rounded-2xl bg-white p-8 border ${
+      className={`relative flex h-full flex-col rounded-xl bg-white p-8 border ${
         featured
-          ? "border-2 border-coral shadow-lg"
-          : "border-cream-dark"
+          ? "border-2 border-signal-orange shadow-lg"
+          : "border-warm-grey-dark"
       } ${className}`}
     >
       {/* Featured badge */}
       {featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="rounded-full bg-coral px-5 py-1.5 text-sm font-medium text-white">
+          <span className="rounded-full bg-signal-orange px-5 py-1.5 text-sm font-medium text-white">
             Mest Populær
           </span>
         </div>
@@ -59,23 +59,23 @@ export default function PricingCard({
           {price}
         </span>
         {period && (
-          <span className="text-gray-dark">{period}</span>
+          <span className="text-secondary">{period}</span>
         )}
       </div>
 
       {/* Description */}
-      <p className="mt-3 leading-relaxed text-gray-dark">
+      <p className="mt-3 leading-relaxed text-secondary">
         {description}
       </p>
 
       {/* Divider */}
-      <hr className="my-6 border-cream-dark" />
+      <hr className="my-6 border-warm-grey-dark" />
 
       {/* Features */}
       <ul className="flex-1 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-start gap-3">
-            <span className="mt-0.5 text-coral" aria-hidden="true">
+            <span className="mt-0.5 text-signal-orange" aria-hidden="true">
               &#10003;
             </span>
             <span className="text-black">{feature}</span>
@@ -87,10 +87,10 @@ export default function PricingCard({
       <div className="mt-8">
         <Link
           href={ctaHref}
-          className={`block w-full rounded-full py-3.5 text-center font-medium uppercase tracking-wider transition ${
+          className={`block w-full rounded-lg py-3.5 text-center font-medium tracking-wider transition ${
             featured
-              ? "bg-coral text-white hover:bg-coral-dark"
-              : "border-2 border-coral text-coral hover:bg-coral hover:text-cream"
+              ? "bg-signal-orange text-white hover:bg-orange-hover"
+              : "border-2 border-signal-orange text-signal-orange hover:bg-signal-orange hover:text-white"
           }`}
         >
           {cta}

@@ -70,35 +70,39 @@ export default function OmOsPage() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid items-center gap-16 md:grid-cols-2">
               <ScrollReveal>
+                {/* TODO: Image of person in EMS suit mid-exercise, focused expression, professional studio setting. Show either man or mixed gender for unisex appeal. */}
                 <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-peach">
                   <span className="font-serif text-xl text-gray-dark">
-                    EMS Tr&aelig;ningsbillede
+                    Person i EMS-dragt under tr&aelig;ning
                   </span>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
                 <span className="text-sm uppercase tracking-widest text-coral">
-                  Teknologien
+                  Hvad er EMS
                 </span>
                 <h2 className="mt-3 font-serif text-4xl text-black">
-                  Hvad er EMS Tr&aelig;ning?
+                  Elektrisk Muskelstimulation
                 </h2>
                 <p className="mt-6 leading-relaxed text-gray-dark">
-                  Elektrisk Muskelstimulation (EMS) er en banebrydende
-                  tr&aelig;ningsmetode der bruger milde elektriske impulser til
-                  at aktivere dine muskler langt dybere end traditionel
-                  tr&aelig;ning. Teknologien stammer fra fysioterapi og
-                  genoptr&aelig;ning, og er nu tilg&aelig;ngelig som en af de
-                  mest effektive tr&aelig;ningsformer i verden.
+                  EMS sender elektriske impulser direkte til dine muskler
+                  gennem en specialdesignet dragt. Mens du udfører simple
+                  øvelser, aktiveres over 300 muskler samtidig — inklusive
+                  de dybe stabiliserende muskler, som konventionel træning
+                  sjældent rammer.
                 </p>
                 <p className="mt-4 leading-relaxed text-gray-dark">
-                  Under en EMS session b&aelig;rer du en specialdesignet dragt
-                  med elektroder, der sender impulser til over 300 muskelgrupper
-                  simultant. Det betyder, at 20 minutters EMS tr&aelig;ning
-                  giver dig resultater svarende til 3-4 timers konventionel
-                  styrketr&aelig;ning.
+                  Resultatet? En 20-minutters session der matcher 3-4 timers
+                  traditionel styrketræning. Skånsomt for led. Dokumenterede
+                  resultater. Og du er færdig før din frokostpause slutter.
                 </p>
+                <Link
+                  href="/ems-traening"
+                  className="mt-6 inline-flex items-center text-coral font-medium hover:text-coral-dark transition-colors"
+                >
+                  L&aelig;s mere om EMS &rarr;
+                </Link>
               </ScrollReveal>
             </div>
           </div>

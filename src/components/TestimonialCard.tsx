@@ -9,7 +9,8 @@ import { useState, useEffect, useCallback } from "react";
 interface Testimonial {
   quote: string;
   name: string;
-  detail: string;
+  role: string;
+  memberSince: string;
 }
 
 interface TestimonialCardProps {
@@ -23,6 +24,7 @@ interface TestimonialCardProps {
    Component
    ============================================ */
 
+// TODO: Add member photos with permission
 export default function TestimonialCard({
   testimonials,
   autoPlay = 5000,
@@ -58,7 +60,7 @@ export default function TestimonialCard({
     <div className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center ${className}`}>
       {/* Decorative opening quote mark */}
       <div
-        className="font-serif text-8xl text-coral/30 leading-none select-none mb-4"
+        className="font-serif text-8xl text-signal-orange/30 leading-none select-none mb-4"
         aria-hidden="true"
       >
         &ldquo;
@@ -75,14 +77,21 @@ export default function TestimonialCard({
           &ldquo;{current.quote}&rdquo;
         </blockquote>
 
-        <p className="mt-6 font-medium text-black">
-          <span className="text-coral mr-2" aria-hidden="true">
-            &mdash;
+        {/* Member avatar placeholder */}
+        <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-warm-grey">
+          <span className="font-serif text-sm font-medium text-secondary">
+            {current.name.split(" ").slice(0, 2).map((n) => n[0]).join("")}
           </span>
+        </div>
+
+        <p className="text-black mt-4 font-medium">
           {current.name}
         </p>
-        <p className="text-sm text-gray-dark mt-1">
-          {current.detail}
+        <p className="text-sm text-signal-orange mt-1">
+          {current.role}
+        </p>
+        <p className="text-xs text-secondary mt-1">
+          {current.memberSince}
         </p>
       </div>
 
@@ -96,8 +105,8 @@ export default function TestimonialCard({
               aria-label={`Gå til udtalelse ${index + 1}`}
               className={`rounded-full transition-all duration-300 ${
                 index === active
-                  ? "bg-coral w-2.5 h-2.5"
-                  : "bg-coral/20 w-2.5 h-2.5 hover:bg-coral/40"
+                  ? "bg-signal-orange w-2.5 h-2.5"
+                  : "bg-signal-orange/20 w-2.5 h-2.5 hover:bg-signal-orange/40"
               }`}
             />
           ))}

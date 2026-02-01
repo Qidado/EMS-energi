@@ -30,7 +30,7 @@ export default function ArticleListCard({
 }: ArticleListCardProps) {
   return (
     <div
-      className={`rounded-2xl bg-teal p-8 ${className}`}
+      className={`rounded-xl bg-forest-green p-8 ${className}`}
     >
       {/* Heading */}
       <h3 className="font-serif text-2xl text-white not-italic">
@@ -63,7 +63,7 @@ export default function ArticleListCard({
         <div className="mt-6">
           <Link
             href={allArticlesHref}
-            className="font-medium text-white transition-colors hover:text-coral"
+            className="font-medium text-white transition-colors hover:text-signal-orange"
           >
             {allArticlesLabel} &rarr;
           </Link>

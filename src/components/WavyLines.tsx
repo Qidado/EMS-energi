@@ -1,6 +1,6 @@
 /* ============================================
    WavyLines — Horizontal wavy line pattern
-   Decorative accent in coral-light
+   Decorative accent in orange (#FF5A00)
    ============================================ */
 
 interface WavyLinesProps {
@@ -11,7 +11,7 @@ interface WavyLinesProps {
 
 export default function WavyLines({
   lines = 3,
-  color = "#F08A60",
+  color = "#FF5A00",
   className = "",
 }: WavyLinesProps) {
   const lineSpacing = 8;

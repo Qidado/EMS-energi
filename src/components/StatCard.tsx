@@ -4,20 +4,20 @@
    ============================================ */
 
 interface StatCardProps {
-  accentColor?: "gray" | "success" | "warning" | "accent";
+  accentColor?: "gray" | "success" | "warning" | "orange";
   children: React.ReactNode;
   className?: string;
 }
 
 const accentColorMap: Record<string, string> = {
-  gray: "#D4D4D8",
+  gray: "#D4D1CC",
   success: "#10B981",
   warning: "#F59E0B",
-  accent: "#6366F1",
+  orange: "#FF5A00",
 };
 
 export default function StatCard({
-  accentColor = "accent",
+  accentColor = "orange",
   children,
   className = "",
 }: StatCardProps) {
