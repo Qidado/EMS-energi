@@ -53,9 +53,9 @@ export default function OmOsPage() {
 
       <main>
         {/* Hero */}
-        <section className="bg-cream pt-40 pb-20 text-center">
+        <section className="bg-cream pt-28 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20 text-center">
           <ScrollReveal className="mx-auto max-w-3xl px-6">
-            <h1 className="font-serif text-5xl md:text-6xl text-black">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black">
               Om EMS Energi
             </h1>
             <p className="mt-4 text-lg text-gray-dark">
@@ -66,9 +66,9 @@ export default function OmOsPage() {
         </section>
 
         {/* What is EMS */}
-        <section className="bg-cream py-24">
+        <section className="bg-cream py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
-            <div className="grid items-center gap-16 md:grid-cols-2">
+            <div className="grid items-center gap-8 md:gap-16 md:grid-cols-2">
               <ScrollReveal>
                 {/* TODO: Image of person in EMS suit mid-exercise, focused expression, professional studio setting. Show either man or mixed gender for unisex appeal. */}
                 <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-peach">
@@ -82,7 +82,7 @@ export default function OmOsPage() {
                 <span className="text-sm uppercase tracking-widest text-coral">
                   Hvad er EMS
                 </span>
-                <h2 className="mt-3 font-serif text-4xl text-black">
+                <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
                   Elektrisk Muskelstimulation
                 </h2>
                 <p className="mt-6 leading-relaxed text-gray-dark">
@@ -109,18 +109,18 @@ export default function OmOsPage() {
         </section>
 
         {/* Values */}
-        <section className="bg-peach py-24">
+        <section className="bg-peach py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
               <span className="text-sm font-medium uppercase tracking-widest text-coral">
                 Vores V&aelig;rdier
               </span>
-              <h2 className="mt-3 font-serif text-4xl text-black">
+              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
                 Hvad vi st&aring;r for
               </h2>
             </ScrollReveal>
 
-            <div className="mt-16 grid gap-10 md:grid-cols-3">
+            <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-10 md:grid-cols-3">
               {values.map((value, index) => (
                 <ScrollReveal key={value.title} delay={index * 150}>
                   <div className="border-l-2 border-coral pl-6">
@@ -138,18 +138,18 @@ export default function OmOsPage() {
         </section>
 
         {/* Team */}
-        <section className="bg-cream py-24">
+        <section className="bg-cream py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
               <span className="text-sm uppercase tracking-widest text-coral">
                 Teamet
               </span>
-              <h2 className="mt-3 font-serif text-4xl text-black">
+              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
                 M&oslash;d vores tr&aelig;nere
               </h2>
             </ScrollReveal>
 
-            <div className="mt-16 grid gap-10 md:grid-cols-3">
+            <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-10 md:grid-cols-3">
               {trainers.map((trainer, index) => (
                 <ScrollReveal key={trainer.name} delay={index * 150}>
                   <div>
@@ -176,9 +176,9 @@ export default function OmOsPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-teal text-white py-24 text-center">
+        <section className="bg-teal text-white py-12 sm:py-16 md:py-24 text-center">
           <ScrollReveal className="mx-auto max-w-3xl px-6">
-            <h2 className="font-serif text-4xl">
+            <h2 className="font-serif text-3xl sm:text-4xl">
               Bliv en del af EMS Energi
             </h2>
             <p className="mt-4 text-lg text-white/70">

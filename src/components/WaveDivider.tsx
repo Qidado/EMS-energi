@@ -32,7 +32,7 @@ export default function WaveDivider({
       <svg
         viewBox="0 0 1440 96"
         preserveAspectRatio="none"
-        className="block w-full h-12 md:h-16 lg:h-20"
+        className="block w-full h-8 sm:h-10 md:h-16 lg:h-20"
         fill={color}
       >
         <path d={paths[variant]} />

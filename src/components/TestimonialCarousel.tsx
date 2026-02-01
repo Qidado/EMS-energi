@@ -110,7 +110,7 @@ export default function TestimonialCarousel() {
     >
       {/* Decorative Opening Quote Mark */}
       <div
-        className="font-serif text-8xl text-signal-orange/30 leading-none select-none mb-4"
+        className="font-serif text-4xl sm:text-6xl md:text-8xl text-signal-orange/30 leading-none select-none mb-4"
         aria-hidden="true"
       >
         &ldquo;
@@ -123,7 +123,7 @@ export default function TestimonialCarousel() {
           transition: "opacity 0.3s ease-in-out",
         }}
       >
-        <blockquote className="font-serif text-2xl md:text-3xl italic text-black leading-relaxed">
+        <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl italic text-black leading-relaxed">
           &ldquo;{current.quote}&rdquo;
         </blockquote>
 

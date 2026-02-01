@@ -141,7 +141,7 @@ export default function Footer() {
       <WaveDivider color="#1A3D2E" />
       <footer className="bg-forest-green border-t border-forest-green">
         <div className="max-w-7xl mx-auto py-16 px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-8">
             {/* Col 1: Brand */}
             <div>
               <span className="font-serif text-xl text-white block mb-3">

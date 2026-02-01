@@ -54,7 +54,7 @@ export default function ImageCard({
 
       {/* Title */}
       <h3
-        className={`relative z-10 px-6 text-center font-serif text-3xl italic ${titleColorMap[titleColor]}`}
+        className={`relative z-10 px-6 text-center font-serif text-xl sm:text-2xl md:text-3xl italic ${titleColorMap[titleColor]}`}
       >
         {title}
       </h3>

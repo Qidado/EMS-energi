@@ -80,10 +80,10 @@ export default function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement Bar */}
       {announcementVisible && (
-        <div className="bg-warm-grey py-2.5 px-4 text-center relative">
+        <div className="bg-warm-grey py-1.5 px-3 sm:py-2.5 sm:px-4 text-center relative">
           <Link
             href="#find-os"
-            className="text-black text-sm hover:text-signal-orange transition-colors duration-200"
+            className="text-black text-xs sm:text-sm hover:text-signal-orange transition-colors duration-200"
           >
             Pr&oslash;v EMS &mdash; F&oslash;rste tr&aelig;ning gratis! &rarr;
           </Link>

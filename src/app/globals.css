@@ -47,7 +47,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 6rem;
+    }
   }
 
   body {
@@ -149,7 +155,10 @@
 /* ============================================
    SCROLLBAR
    ============================================ */
-::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar { width: 6px; }
+@media (min-width: 768px) {
+  ::-webkit-scrollbar { width: 10px; }
+}
 ::-webkit-scrollbar-track { background: var(--color-off-white); }
 ::-webkit-scrollbar-thumb { background: var(--color-warm-grey-dark); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-signal-orange); }

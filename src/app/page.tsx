@@ -192,7 +192,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             1. Hero Section
         ────────────────────────────────────────────── */}
-        <section id="hero" className="relative flex min-h-screen items-center bg-off-white">
+        <section id="hero" className="relative flex min-h-[70vh] sm:min-h-[80vh] md:min-h-screen items-center bg-off-white py-12 sm:py-16 md:py-24 lg:py-32">
           <div className="mx-auto w-full max-w-7xl px-6">
             <ScrollReveal>
               <span className="text-xs font-medium uppercase tracking-[0.2em] text-signal-orange">
@@ -201,7 +201,7 @@ export default function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
-              <h1 className="mt-6 font-serif text-5xl leading-tight text-black md:text-7xl md:leading-tight">
+              <h1 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight text-black">
                 Tr&aelig;n smartere.
                 <br />
                 M&aelig;rk forskellen.
@@ -239,11 +239,11 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             2. What is EMS Section (from om-os — richer)
         ────────────────────────────────────────────── */}
-        <section id="hvad-er-ems" className="bg-off-white py-24">
+        <section id="hvad-er-ems" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
-            <div className="grid items-center gap-16 md:grid-cols-2">
+            <div className="grid items-center gap-8 md:gap-16 md:grid-cols-2">
               <ScrollReveal>
-                <div className="flex aspect-[4/3] items-center justify-center rounded-xl bg-warm-grey">
+                <div className="flex aspect-[4/3] max-h-[280px] sm:max-h-none items-center justify-center rounded-xl bg-warm-grey">
                   <span className="font-serif text-xl text-secondary">
                     Person i EMS-dragt under tr&aelig;ning
                   </span>
@@ -254,7 +254,7 @@ export default function Home() {
                 <span className="text-sm uppercase tracking-widest text-signal-orange">
                   Hvad er EMS
                 </span>
-                <h2 className="mt-3 font-serif text-4xl text-black">
+                <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
                   Elektrisk Muskelstimulation
                 </h2>
                 <p className="mt-6 leading-relaxed text-secondary">
@@ -283,21 +283,21 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             3. Who is it for (from om-os — personas)
         ────────────────────────────────────────────── */}
-        <section id="hvem-er-det-for" className="bg-warm-grey py-24">
+        <section id="hvem-er-det-for" className="bg-warm-grey py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
               <span className="text-sm uppercase tracking-widest text-signal-orange">
                 Hvem er det for
               </span>
-              <h2 className="mt-3 font-serif text-4xl text-black">
+              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
                 EMS passer til dig — uanset udgangspunkt
               </h2>
             </ScrollReveal>
 
-            <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {personas.map((persona, index) => (
                 <ScrollReveal key={persona.title} delay={index * 100}>
-                  <div className="rounded-xl border border-black/[0.06] bg-white p-8">
+                  <div className="rounded-xl border border-black/[0.06] bg-white p-5 sm:p-6 md:p-8">
                     <span className="text-2xl">{persona.icon}</span>
                     <h3 className="mt-4 font-serif text-lg text-black">
                       {persona.title}
@@ -315,7 +315,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             4. Benefits / Why Choose EMS (from om-os — richer)
         ────────────────────────────────────────────── */}
-        <section id="fordele" className="bg-white py-24">
+        <section id="fordele" className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
               <h2 className="font-serif text-4xl text-black">
@@ -323,11 +323,11 @@ export default function Home() {
               </h2>
             </ScrollReveal>
 
-            <div className="mt-16 grid gap-10 md:grid-cols-3">
+            <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-8 md:grid-cols-3 md:gap-10">
               {whyEms.map((item, index) => (
                 <ScrollReveal key={item.number} delay={index * 150}>
-                  <div className="relative pt-12">
-                    <span className="absolute top-0 left-0 font-serif text-7xl font-bold leading-none text-black/[0.06] select-none">
+                  <div className="relative pt-10 md:pt-12">
+                    <span className="absolute top-0 left-0 font-serif text-5xl md:text-7xl font-bold leading-none text-black/[0.06] select-none">
                       {item.number}
                     </span>
                     <h3 className="font-serif text-xl text-black">
@@ -346,7 +346,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             5. First Session Process (from om-os — timeline)
         ────────────────────────────────────────────── */}
-        <section id="din-foerste-session" className="bg-off-white py-24">
+        <section id="din-foerste-session" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
               <span className="text-sm uppercase tracking-widest text-signal-orange">
@@ -361,14 +361,14 @@ export default function Home() {
               {/* Horizontal connector line — desktop only */}
               <div className="pointer-events-none absolute top-5 left-[12.5%] right-[12.5%] hidden h-px bg-signal-orange/20 md:block" />
 
-              <div className="grid gap-12 md:grid-cols-4 md:gap-0">
+              <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-0">
                 {steps.map((step, index) => (
                   <ScrollReveal key={step.number} delay={index * 150}>
-                    <div className="relative px-4 text-center">
-                      <div className="relative z-10 mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-signal-orange text-sm font-bold text-white">
+                    <div className="relative px-2 sm:px-4 text-center">
+                      <div className="relative z-10 mx-auto flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-signal-orange text-xs sm:text-sm font-bold text-white">
                         {step.number}
                       </div>
-                      <div className="mx-auto mt-6 flex aspect-[4/3] max-w-[180px] items-center justify-center rounded-xl bg-warm-grey">
+                      <div className="mx-auto mt-4 sm:mt-6 flex aspect-[4/3] max-w-[140px] sm:max-w-[180px] items-center justify-center rounded-xl bg-warm-grey">
                         <span className="text-xs text-secondary">Foto</span>
                       </div>
                       <h3 className="mt-4 font-serif text-lg text-black">
@@ -402,7 +402,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             6. Testimonials
         ────────────────────────────────────────────── */}
-        <section id="udtalelser" className="bg-off-white py-24 md:py-32">
+        <section id="udtalelser" className="bg-off-white py-12 sm:py-16 md:py-24 lg:py-32">
           <ScrollReveal>
             <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-signal-orange">
               Hvad vores medlemmer siger
@@ -417,7 +417,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             7. Pricing (full — from priser)
         ────────────────────────────────────────────── */}
-        <section id="priser" className="bg-off-white py-24">
+        <section id="priser" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal>
               <div className="text-center">
@@ -434,7 +434,7 @@ export default function Home() {
               {pricingPlans.map((plan, index) => (
                 <ScrollReveal key={plan.name} delay={index * 120}>
                   <div
-                    className={`relative rounded-xl bg-white p-8 ${
+                    className={`relative rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
                       plan.featured
                         ? "border-2 border-signal-orange shadow-lg mt-6 sm:mt-0"
                         : "border border-warm-grey-dark"
@@ -513,7 +513,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             8. FAQ
         ────────────────────────────────────────────── */}
-        <section id="faq" className="bg-off-white py-24">
+        <section id="faq" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-4xl px-6">
             <ScrollReveal>
               <div className="text-center mb-12">
@@ -535,7 +535,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             9. Team
         ────────────────────────────────────────────── */}
-        <section id="team" className="bg-off-white py-24">
+        <section id="team" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
               <span className="text-sm uppercase tracking-widest text-signal-orange">
@@ -549,7 +549,7 @@ export default function Home() {
               </p>
             </ScrollReveal>
 
-            <div className="mt-16 grid gap-10 md:grid-cols-3">
+            <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-10 md:grid-cols-3">
               {trainers.map((trainer, index) => (
                 <ScrollReveal key={index} delay={index * 150}>
                   <div>
@@ -576,7 +576,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             10. Location
         ────────────────────────────────────────────── */}
-        <section id="find-os" className="bg-white py-24">
+        <section id="find-os" className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center mb-16">
               <span className="text-sm uppercase tracking-widest text-signal-orange">
@@ -587,7 +587,7 @@ export default function Home() {
               </h2>
             </ScrollReveal>
 
-            <div className="grid gap-12 md:grid-cols-2">
+            <div className="grid gap-8 md:gap-12 md:grid-cols-2">
               {/* Left — Info */}
               <ScrollReveal>
                 <div className="space-y-8">
@@ -639,10 +639,10 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             11. CTA Section
         ────────────────────────────────────────────── */}
-        <section id="book" className="bg-forest-green py-24 text-center text-white md:py-32">
+        <section id="book" className="bg-forest-green py-12 sm:py-16 md:py-24 lg:py-32 text-center text-white">
           <div className="mx-auto max-w-7xl px-6">
             <ScrollReveal>
-              <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl">
                 Klar til at pr&oslash;ve?
               </h2>
             </ScrollReveal>
@@ -662,8 +662,10 @@ export default function Home() {
                   Book Gratis Pr&oslash;vetr&aelig;ning
                 </Link>
               </div>
-              <p className="mt-6 text-sm text-white/50">
-                &#10003; Gratis f&oslash;rste session &nbsp; &#10003; Ingen binding &nbsp; &#10003; Book online p&aring; 30 sekunder
+              <p className="mt-6 text-xs sm:text-sm text-white/50 flex flex-wrap justify-center gap-x-4 gap-y-1">
+                <span>&#10003; Gratis f&oslash;rste session</span>
+                <span>&#10003; Ingen binding</span>
+                <span>&#10003; Book online p&aring; 30 sekunder</span>
               </p>
             </ScrollReveal>
           </div>

@@ -33,7 +33,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative flex h-full flex-col rounded-xl bg-white p-8 border ${
+      className={`relative flex h-full flex-col rounded-xl bg-white p-5 sm:p-6 md:p-8 border ${
         featured
           ? "border-2 border-signal-orange shadow-lg"
           : "border-warm-grey-dark"

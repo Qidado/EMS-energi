@@ -32,7 +32,7 @@ export default function StatCard({
         aria-hidden="true"
       />
 
-      <div className="p-6">{children}</div>
+      <div className="p-4 sm:p-6">{children}</div>
     </div>
   );
 }
