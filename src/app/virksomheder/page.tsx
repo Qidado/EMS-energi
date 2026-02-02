@@ -543,7 +543,7 @@ export default function Virksomheder() {
         {/* ──────────────────────────────────────────────
             6. CTA
         ────────────────────────────────────────────── */}
-        <section className="bg-forest-green py-12 sm:py-16 md:py-24 lg:py-32 text-center text-white">
+        <section className="bg-black py-12 sm:py-16 md:py-24 lg:py-32 text-center text-white">
           <div className="mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl">
@@ -562,7 +562,7 @@ export default function Virksomheder() {
               <div className="mt-10">
                 <Link
                   href="#kontakt-form"
-                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-white px-10 py-4 text-lg font-medium text-forest-green transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-signal-orange px-10 py-4 text-lg font-medium text-white transition-all hover:bg-orange-hover hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Kontakt os i dag
                 </Link>
