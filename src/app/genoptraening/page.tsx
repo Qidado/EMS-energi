@@ -167,7 +167,7 @@ export default function GenoptraeningPage() {
               <ul className="mt-8 space-y-4">
                 {benefits.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-slate">
-                    <span className="mt-0.5 text-navy">&check;</span>
+                    <span className="mt-0.5 text-navy">&#10003;</span>
                     {item}
                   </li>
                 ))}
