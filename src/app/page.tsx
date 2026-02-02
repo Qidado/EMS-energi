@@ -252,6 +252,11 @@ const faqItems = [
     answer:
       "Yes! All our trainers speak fluent English. International clients welcome.",
   },
+  {
+    question: "Kan jeg træne EMS hvis jeg er gravid?",
+    answer:
+      "Nej, EMS frarådes under graviditet. Vi anbefaler at vente til efter fødslen og evt. konsultere din læge før genoptagelse af træning.",
+  },
 ];
 
 /* ────────────────────────────────────────────── page ── */
@@ -265,7 +270,7 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             1. Hero Section
         ────────────────────────────────────────────── */}
-        <section id="hero" className="relative flex min-h-[70vh] sm:min-h-[80vh] md:min-h-screen items-center bg-off-white py-12 sm:py-16 md:py-24 lg:py-32">
+        <section id="hero" className="relative flex min-h-[70vh] sm:min-h-[80vh] items-center bg-off-white py-12 sm:py-16 md:py-20 lg:py-24">
           <div className="mx-auto w-full max-w-7xl px-6">
             <div className="grid items-center gap-10 md:grid-cols-[3fr_2fr]">
               {/* Text column */}
@@ -362,7 +367,7 @@ export default function Home() {
                   href="#fordele"
                   className="mt-6 inline-flex items-center text-orange-text font-medium hover:text-orange-hover transition-colors"
                 >
-                  L&aelig;s mere om EMS &rarr;
+                  Se fordelene &rarr;
                 </Link>
               </ScrollReveal>
             </div>
@@ -449,53 +454,24 @@ export default function Home() {
               </h2>
             </ScrollReveal>
 
-            {/* Desktop layout — horizontal */}
-            <div className="relative mt-16 hidden md:block">
-              {/* Horizontal connector line */}
-              <div className="pointer-events-none absolute top-8 left-[12.5%] right-[12.5%] h-px bg-signal-orange/20" />
+            {/* Responsive timeline — vertical on mobile, horizontal on desktop */}
+            <div className="relative mt-10 md:mt-16">
+              {/* Connector line: vertical on mobile, horizontal on desktop */}
+              <div className="pointer-events-none absolute left-5 top-0 bottom-0 w-px bg-signal-orange/20 md:left-[12.5%] md:right-[12.5%] md:top-8 md:bottom-auto md:h-px md:w-auto" />
 
-              <div className="grid grid-cols-4">
-                {steps.map((step, index) => (
-                  <ScrollReveal key={step.number} delay={index * 150}>
-                    <div className="relative px-4 text-center">
-                      <span className="relative z-10 block font-serif text-5xl font-bold leading-none text-signal-orange/15 select-none">
-                        {step.number}
-                      </span>
-                      <h3 className="mt-3 font-serif text-lg text-black">
-                        {step.title}
-                      </h3>
-                      {step.subtitle && (
-                        <span className="mt-2 inline-block rounded-full bg-signal-orange/10 px-3 py-0.5 text-sm font-medium text-orange-text">
-                          {step.subtitle}
-                        </span>
-                      )}
-                      <p className="mt-2 text-sm leading-relaxed text-secondary">
-                        {step.body}
-                      </p>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile layout — vertical with numbers on left */}
-            <div className="relative mt-10 md:hidden">
-              {/* Vertical connector line */}
-              <div className="pointer-events-none absolute left-5 top-0 bottom-0 w-px bg-signal-orange/20" />
-
-              <div className="space-y-8">
+              <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-4">
                 {steps.map((step, index) => (
                   <ScrollReveal key={step.number} delay={index * 100}>
-                    <div className="relative grid grid-cols-[40px_1fr] gap-4">
-                      <span className="relative z-10 font-serif text-3xl font-bold leading-none text-signal-orange/15 text-center select-none">
+                    <div className="relative grid grid-cols-[40px_1fr] gap-4 md:grid-cols-none md:text-center md:px-4">
+                      <span className="relative z-10 font-serif text-3xl md:text-5xl font-bold leading-none text-signal-orange/15 text-center select-none md:block">
                         {step.number}
                       </span>
                       <div>
-                        <h3 className="font-serif text-lg text-black">
+                        <h3 className="font-serif text-lg text-black md:mt-3">
                           {step.title}
                         </h3>
                         {step.subtitle && (
-                          <span className="mt-1 inline-block rounded-full bg-signal-orange/10 px-3 py-0.5 text-sm font-medium text-orange-text">
+                          <span className="mt-1 md:mt-2 inline-block rounded-full bg-signal-orange/10 px-3 py-0.5 text-sm font-medium text-orange-text">
                             {step.subtitle}
                           </span>
                         )}
@@ -551,14 +527,14 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <div className="mt-16 grid items-start gap-8 md:grid-cols-3">
+            <div className="mt-16 grid items-stretch gap-8 md:grid-cols-3">
               {pricingPlans.map((plan, index) => (
-                <ScrollReveal key={plan.name} delay={index * 120}>
+                <ScrollReveal key={plan.name} delay={index * 120} className="h-full">
                   <div
-                    className={`relative rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
+                    className={`relative flex h-full flex-col rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
                       plan.featured
                         ? "border-2 border-signal-orange shadow-lg mt-6 sm:mt-0"
-                        : "border border-warm-grey-dark"
+                        : "border-2 border-warm-grey-dark"
                     }`}
                   >
                     {/* Featured badge */}
@@ -606,12 +582,12 @@ export default function Home() {
                     </ul>
 
                     {/* CTA */}
-                    <div className="mt-8">
+                    <div className="mt-auto pt-8">
                       <Link
                         href="#find-os"
                         className={`block w-full rounded-lg py-3 text-center font-medium transition ${
                           plan.featured
-                            ? "bg-signal-orange py-4 text-white hover:bg-orange-hover"
+                            ? "bg-signal-orange text-white hover:bg-orange-hover"
                             : "border-2 border-signal-orange text-orange-text hover:bg-signal-orange hover:text-white"
                         }`}
                       >
@@ -628,7 +604,7 @@ export default function Home() {
             </p>
             <p className="mt-2 text-center">
               <Link
-                href="#faq"
+                href="/virksomheder"
                 className="text-sm font-medium text-orange-text transition-colors hover:text-orange-hover"
               >
                 Se alle priser og firmapakker &rarr;
