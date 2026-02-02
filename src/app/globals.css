@@ -2,8 +2,6 @@
 
 @theme inline {
   /* Primary colors */
-  --color-cobalt: #1E4AE9;
-  --color-royal: #2851CC;
   --color-navy: #0F1C3F;
   --color-navy-light: #1A3058;
 
@@ -83,12 +81,6 @@
   small, .text-small { font-size: 14px; }
 
   /* Heading utility classes */
-  .heading-cobalt {
-    font-family: var(--font-heading), "Georgia", serif;
-    font-style: italic;
-    color: var(--color-cobalt);
-  }
-
   .heading-navy {
     font-family: var(--font-heading), "Georgia", serif;
     font-style: italic;
@@ -96,7 +88,7 @@
   }
 
   a {
-    color: var(--color-cobalt);
+    color: var(--color-navy);
     transition: color 200ms ease-out;
   }
 
@@ -111,7 +103,7 @@
 
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-off-white), 0 0 0 4px var(--color-cobalt);
+    box-shadow: 0 0 0 2px var(--color-off-white), 0 0 0 4px var(--color-navy);
   }
 }
 
@@ -184,7 +176,7 @@
 }
 ::-webkit-scrollbar-track { background: var(--color-off-white); }
 ::-webkit-scrollbar-thumb { background: var(--color-border-medium); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-cobalt); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-navy); }
 
 /* ============================================
    REDUCED MOTION

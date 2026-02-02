@@ -45,7 +45,7 @@ export default function ContactForm() {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-cobalt"
+            className="text-navy"
           >
             <path d="M20 6L9 17l-5-5" />
           </svg>
@@ -61,7 +61,7 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    "w-full rounded-xl border border-border-medium bg-white p-4 text-navy placeholder:text-slate/60 focus:border-cobalt focus:ring-1 focus:ring-cobalt/10 outline-none transition";
+    "w-full rounded-xl border border-border-medium bg-white p-4 text-navy placeholder:text-slate/60 focus:border-navy focus:ring-1 focus:ring-navy/10 outline-none transition";
 
   return (
     <div>
@@ -173,7 +173,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 w-full rounded-lg bg-cobalt px-8 py-3 font-medium text-white transition hover:bg-royal disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-2 w-full rounded-lg bg-navy px-8 py-3 font-medium text-white transition hover:bg-navy-light disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? "Sender..." : "Send Besked"}
         </button>

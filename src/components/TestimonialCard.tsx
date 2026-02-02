@@ -87,7 +87,7 @@ export default function TestimonialCard({
         <p className="text-navy mt-4 font-medium">
           {current.name}
         </p>
-        <p className="text-sm text-cobalt mt-1">
+        <p className="text-sm text-navy mt-1">
           {current.role}
         </p>
         <p className="text-xs text-slate mt-1">
@@ -105,8 +105,8 @@ export default function TestimonialCard({
               aria-label={`Gå til udtalelse ${index + 1}`}
               className={`rounded-full transition-all duration-300 ${
                 index === active
-                  ? "bg-cobalt w-2.5 h-2.5"
-                  : "bg-cobalt/20 w-2.5 h-2.5 hover:bg-cobalt/40"
+                  ? "bg-navy w-2.5 h-2.5"
+                  : "bg-navy/20 w-2.5 h-2.5 hover:bg-navy/40"
               }`}
             />
           ))}

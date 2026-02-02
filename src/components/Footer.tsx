@@ -154,7 +154,7 @@ export default function Footer() {
                   href="https://instagram.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-cobalt transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-navy transition-colors duration-200"
                   aria-label="Instagram"
                 >
                   <InstagramIcon />
@@ -163,7 +163,7 @@ export default function Footer() {
                   href="https://facebook.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-cobalt transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-navy transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <FacebookIcon />
@@ -172,7 +172,7 @@ export default function Footer() {
                   href="https://linkedin.com/company/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-cobalt transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-navy transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <LinkedInIcon />

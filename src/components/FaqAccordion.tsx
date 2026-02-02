@@ -39,7 +39,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                className={`h-6 w-6 shrink-0 text-cobalt transition-transform duration-300 ${
+                className={`h-6 w-6 shrink-0 text-navy transition-transform duration-300 ${
                   isOpen ? "rotate-45" : "rotate-0"
                 }`}
               >

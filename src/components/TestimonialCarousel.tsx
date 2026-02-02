@@ -153,7 +153,7 @@ export default function TestimonialCarousel() {
         <button
           onClick={goPrev}
           aria-label="Forrige udtalelse"
-          className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-border-medium/30 hover:bg-cobalt hover:text-white hover:border-cobalt transition-all duration-200"
+          className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-border-medium/30 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -162,7 +162,7 @@ export default function TestimonialCarousel() {
         <button
           onClick={goNext}
           aria-label="Næste udtalelse"
-          className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-border-medium/30 hover:bg-cobalt hover:text-white hover:border-cobalt transition-all duration-200"
+          className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-border-medium/30 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -198,7 +198,7 @@ export default function TestimonialCarousel() {
           <p className="text-navy mt-4 font-medium">
             {current.name}
           </p>
-          <p className="text-sm text-cobalt mt-1">
+          <p className="text-sm text-navy mt-1">
             {current.role}
           </p>
           <p className="text-xs text-slate mt-1">
@@ -219,7 +219,7 @@ export default function TestimonialCarousel() {
             <span
               className={`rounded-full transition-all duration-300 ${
                 index === active
-                  ? "bg-cobalt w-2.5 h-2.5"
+                  ? "bg-navy w-2.5 h-2.5"
                   : "bg-border-medium/40 w-2.5 h-2.5 hover:bg-border-medium/60"
               }`}
             />

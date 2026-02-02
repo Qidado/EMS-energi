@@ -35,14 +35,14 @@ export default function PricingCard({
     <div
       className={`relative flex h-full flex-col rounded-xl bg-white p-5 sm:p-6 md:p-8 border ${
         featured
-          ? "border-2 border-cobalt shadow-lg"
+          ? "border-2 border-navy shadow-lg"
           : "border-border-medium"
       } ${className}`}
     >
       {/* Featured badge */}
       {featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="rounded-full bg-cobalt px-5 py-1.5 text-sm font-medium text-white">
+          <span className="rounded-full bg-navy px-5 py-1.5 text-sm font-medium text-white">
             Mest Populær
           </span>
         </div>
@@ -75,7 +75,7 @@ export default function PricingCard({
       <ul className="flex-1 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-start gap-3">
-            <span className="mt-0.5 text-cobalt" aria-hidden="true">
+            <span className="mt-0.5 text-navy" aria-hidden="true">
               &#10003;
             </span>
             <span className="text-navy">{feature}</span>
@@ -89,8 +89,8 @@ export default function PricingCard({
           href={ctaHref}
           className={`block w-full rounded-lg py-3.5 text-center font-medium tracking-wider transition ${
             featured
-              ? "bg-cobalt text-white hover:bg-royal"
-              : "border-2 border-cobalt text-cobalt hover:bg-cobalt hover:text-white"
+              ? "bg-navy text-white hover:bg-navy-light"
+              : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
           }`}
         >
           {cta}

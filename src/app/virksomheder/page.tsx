@@ -123,7 +123,7 @@ export default function Virksomheder() {
   }
 
   const inputClasses =
-    "w-full rounded-xl border border-border-medium bg-white p-4 text-navy placeholder:text-muted focus:border-cobalt focus:ring-1 focus:ring-cobalt/10 outline-none transition";
+    "w-full rounded-xl border border-border-medium bg-white p-4 text-navy placeholder:text-muted focus:border-navy focus:ring-1 focus:ring-navy/10 outline-none transition";
 
   return (
     <>
@@ -138,7 +138,7 @@ export default function Virksomheder() {
             <div className="grid items-center gap-10 md:grid-cols-[3fr_2fr]">
               <div>
                 <ScrollReveal>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-navy">
                     Corporate Wellness
                   </span>
                 </ScrollReveal>
@@ -164,7 +164,7 @@ export default function Virksomheder() {
                   <div className="mt-8">
                     <Link
                       href="#kontakt-form"
-                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-cobalt px-8 py-4 font-medium text-white transition-colors hover:bg-royal"
+                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-navy px-8 py-4 font-medium text-white transition-colors hover:bg-navy-light"
                     >
                       Kontakt os for firmapakke
                     </Link>
@@ -190,7 +190,7 @@ export default function Virksomheder() {
         <section className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 Fordele
               </span>
               <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -205,7 +205,7 @@ export default function Virksomheder() {
                   <ScrollReveal key={benefit.title} delay={index * 100}>
                     <div className="rounded-xl border border-navy/[0.06] bg-off-white p-6">
                       <IconComponent
-                        className="h-8 w-8 text-cobalt"
+                        className="h-8 w-8 text-navy"
                         strokeWidth={1.5}
                       />
                       <h3 className="mt-4 font-serif text-lg text-navy">
@@ -229,7 +229,7 @@ export default function Virksomheder() {
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal>
               <div className="text-center">
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-navy">
                   Pakker
                 </span>
                 <h2 className="mt-4 font-serif text-4xl text-navy">
@@ -244,13 +244,13 @@ export default function Virksomheder() {
                   <div
                     className={`relative rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
                       plan.featured
-                        ? "border-2 border-cobalt shadow-lg mt-6 sm:mt-0"
+                        ? "border-2 border-navy shadow-lg mt-6 sm:mt-0"
                         : "border border-border-medium"
                     }`}
                   >
                     {plan.featured && (
                       <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <span className="rounded-full bg-cobalt px-5 py-1.5 text-sm text-white">
+                        <span className="rounded-full bg-navy px-5 py-1.5 text-sm text-white">
                           Mest Popul&aelig;r
                         </span>
                       </div>
@@ -279,7 +279,7 @@ export default function Virksomheder() {
                     <ul className="mt-6 space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <span className="mt-0.5 text-cobalt">
+                          <span className="mt-0.5 text-navy">
                             &#10003;
                           </span>
                           <span className="text-navy">{feature}</span>
@@ -292,8 +292,8 @@ export default function Virksomheder() {
                         href={plan.ctaHref}
                         className={`block w-full rounded-lg py-3 text-center font-medium transition ${
                           plan.featured
-                            ? "bg-cobalt py-4 text-white hover:bg-royal"
-                            : "border-2 border-cobalt text-cobalt hover:bg-cobalt hover:text-white"
+                            ? "bg-navy py-4 text-white hover:bg-navy-light"
+                            : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
                         }`}
                       >
                         {plan.cta}
@@ -363,7 +363,7 @@ export default function Virksomheder() {
         <section id="kontakt-form" className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-2xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 Kontakt
               </span>
               <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -379,7 +379,7 @@ export default function Virksomheder() {
               <div className="mt-10">
                 {submitted ? (
                   <div className="rounded-2xl bg-off-white border border-border-medium p-10 text-center">
-                    <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-cobalt/10">
+                    <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-navy/10">
                       <svg
                         width="32"
                         height="32"
@@ -389,7 +389,7 @@ export default function Virksomheder() {
                         strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="text-cobalt"
+                        className="text-navy"
                       >
                         <path d="M20 6L9 17l-5-5" />
                       </svg>
@@ -529,7 +529,7 @@ export default function Virksomheder() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="mt-2 w-full rounded-lg bg-cobalt px-8 py-3 font-medium text-white transition hover:bg-royal disabled:cursor-not-allowed disabled:opacity-60"
+                      className="mt-2 w-full rounded-lg bg-navy px-8 py-3 font-medium text-white transition hover:bg-navy-light disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       {isSubmitting ? "Sender..." : "Send forespørgsel"}
                     </button>
@@ -562,7 +562,7 @@ export default function Virksomheder() {
               <div className="mt-10">
                 <Link
                   href="#kontakt-form"
-                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-cobalt px-10 py-4 text-lg font-medium text-white transition-all hover:bg-royal hover:shadow-lg hover:-translate-y-0.5"
+                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-navy px-10 py-4 text-lg font-medium text-white transition-all hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Kontakt os i dag
                 </Link>

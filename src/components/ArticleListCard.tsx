@@ -63,7 +63,7 @@ export default function ArticleListCard({
         <div className="mt-6">
           <Link
             href={allArticlesHref}
-            className="font-medium text-white transition-colors hover:text-cobalt"
+            className="font-medium text-white transition-colors hover:text-navy"
           >
             {allArticlesLabel} &rarr;
           </Link>

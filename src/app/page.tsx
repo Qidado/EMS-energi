@@ -277,7 +277,7 @@ export default function Home() {
               {/* Text column */}
               <div>
                 <ScrollReveal>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-navy">
                     EMS Fitness Studio
                   </span>
                 </ScrollReveal>
@@ -302,7 +302,7 @@ export default function Home() {
                   <div className="mt-8">
                     <Link
                       href="#find-os"
-                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-cobalt px-8 py-4 font-medium text-white transition-all hover:bg-royal hover:shadow-lg hover:-translate-y-0.5"
+                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-navy px-8 py-4 font-medium text-white transition-all hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5"
                     >
                       Book Gratis Pr&oslash;vetr&aelig;ning
                     </Link>
@@ -345,7 +345,7 @@ export default function Home() {
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <span className="text-sm uppercase tracking-widest text-cobalt">
+                <span className="text-sm uppercase tracking-widest text-navy">
                   Hvad er EMS
                 </span>
                 <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -366,7 +366,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="#fordele"
-                  className="mt-6 inline-flex items-center text-cobalt font-medium hover:text-royal transition-colors"
+                  className="mt-6 inline-flex items-center text-navy font-medium hover:text-navy-light transition-colors"
                 >
                   Se fordelene &rarr;
                 </Link>
@@ -381,7 +381,7 @@ export default function Home() {
         <section id="hvem-er-det-for" className="bg-baby-blue py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 Hvem er det for
               </span>
               <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -395,7 +395,7 @@ export default function Home() {
                 return (
                   <ScrollReveal key={persona.title} delay={index * 100}>
                     <div className="rounded-xl border border-navy/[0.06] bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                      <IconComponent className="h-6 w-6 text-cobalt" strokeWidth={1.5} />
+                      <IconComponent className="h-6 w-6 text-navy" strokeWidth={1.5} />
                       <h3 className="mt-4 font-serif text-lg text-navy">
                         {persona.title}
                       </h3>
@@ -447,7 +447,7 @@ export default function Home() {
         <section id="din-foerste-session" className="bg-baby-blue py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 Din f&oslash;rste session
               </span>
               <h2 className="mt-3 font-serif text-4xl text-navy">
@@ -458,13 +458,13 @@ export default function Home() {
             {/* Responsive timeline — vertical on mobile, horizontal on desktop */}
             <div className="relative mt-10 md:mt-16">
               {/* Connector line: vertical on mobile, horizontal on desktop */}
-              <div className="pointer-events-none absolute left-5 top-0 bottom-0 w-px bg-cobalt/20 md:left-[12.5%] md:right-[12.5%] md:top-8 md:bottom-auto md:h-px md:w-auto" />
+              <div className="pointer-events-none absolute left-5 top-0 bottom-0 w-px bg-navy/20 md:left-[12.5%] md:right-[12.5%] md:top-8 md:bottom-auto md:h-px md:w-auto" />
 
               <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-4">
                 {steps.map((step, index) => (
                   <ScrollReveal key={step.number} delay={index * 100}>
                     <div className="relative grid grid-cols-[40px_1fr] gap-4 md:grid-cols-none md:text-center md:px-4">
-                      <span className="relative z-10 font-serif text-3xl md:text-5xl font-bold leading-none text-cobalt/15 text-center select-none md:block">
+                      <span className="relative z-10 font-serif text-3xl md:text-5xl font-bold leading-none text-navy/15 text-center select-none md:block">
                         {step.number}
                       </span>
                       <div>
@@ -472,7 +472,7 @@ export default function Home() {
                           {step.title}
                         </h3>
                         {step.subtitle && (
-                          <span className="mt-1 md:mt-2 inline-block rounded-full bg-cobalt/10 px-3 py-0.5 text-sm font-medium text-cobalt">
+                          <span className="mt-1 md:mt-2 inline-block rounded-full bg-navy/10 px-3 py-0.5 text-sm font-medium text-navy">
                             {step.subtitle}
                           </span>
                         )}
@@ -489,7 +489,7 @@ export default function Home() {
             <ScrollReveal className="mt-16 text-center">
               <Link
                 href="#find-os"
-                className="inline-flex items-center font-medium text-cobalt transition-colors hover:text-royal"
+                className="inline-flex items-center font-medium text-navy transition-colors hover:text-navy-light"
               >
                 Book din f&oslash;rste session &rarr;
               </Link>
@@ -502,7 +502,7 @@ export default function Home() {
         ────────────────────────────────────────────── */}
         <section id="udtalelser" className="bg-off-white py-12 sm:py-16 md:py-24 lg:py-32">
           <ScrollReveal>
-            <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
+            <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-navy">
               Hvad vores medlemmer siger
             </p>
           </ScrollReveal>
@@ -519,7 +519,7 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal>
               <div className="text-center">
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-navy">
                   Medlemskab
                 </span>
                 <h2 className="mt-4 font-serif text-4xl text-navy">
@@ -534,14 +534,14 @@ export default function Home() {
                   <div
                     className={`relative flex h-full flex-col rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
                       plan.featured
-                        ? "border-2 border-cobalt shadow-lg mt-6 sm:mt-0"
+                        ? "border-2 border-navy shadow-lg mt-6 sm:mt-0"
                         : "border-2 border-border-medium"
                     }`}
                   >
                     {/* Featured badge */}
                     {plan.featured && (
                       <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <span className="rounded-full bg-cobalt px-5 py-1.5 text-sm text-white">
+                        <span className="rounded-full bg-navy px-5 py-1.5 text-sm text-white">
                           Mest Popul&aelig;r
                         </span>
                       </div>
@@ -576,7 +576,7 @@ export default function Home() {
                     <ul className="mt-6 space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <span className="mt-0.5 text-cobalt">&#10003;</span>
+                          <span className="mt-0.5 text-navy">&#10003;</span>
                           <span className="text-navy">{feature}</span>
                         </li>
                       ))}
@@ -588,8 +588,8 @@ export default function Home() {
                         href="#find-os"
                         className={`block w-full rounded-lg py-3 text-center font-medium transition ${
                           plan.featured
-                            ? "bg-cobalt text-white hover:bg-royal"
-                            : "border-2 border-cobalt text-cobalt hover:bg-cobalt hover:text-white"
+                            ? "bg-navy text-white hover:bg-navy-light"
+                            : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
                         }`}
                       >
                         {plan.cta}
@@ -606,7 +606,7 @@ export default function Home() {
             <p className="mt-2 text-center">
               <Link
                 href="/virksomheder"
-                className="text-sm font-medium text-cobalt transition-colors hover:text-royal"
+                className="text-sm font-medium text-navy transition-colors hover:text-navy-light"
               >
                 Se alle priser og firmapakker &rarr;
               </Link>
@@ -621,7 +621,7 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-navy">
                   Ofte Stillede Sp&oslash;rgsm&aring;l
                 </span>
                 <h2 className="mt-4 font-serif text-4xl text-navy">
@@ -645,7 +645,7 @@ export default function Home() {
         <section id="team" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 M&oslash;d Tr&aelig;nerne
               </span>
               <h2 className="mt-3 font-serif text-4xl text-navy">
@@ -670,7 +670,7 @@ export default function Home() {
                     <h3 className="mt-4 font-serif text-xl text-navy">
                       {trainer.name}
                     </h3>
-                    <p className="mt-1 text-sm text-cobalt">{trainer.role}</p>
+                    <p className="mt-1 text-sm text-navy">{trainer.role}</p>
                     <p className="mt-2 leading-relaxed text-slate">
                       {trainer.bio}
                     </p>
@@ -687,7 +687,7 @@ export default function Home() {
         <section id="find-os" className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center mb-16">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 Find Os
               </span>
               <h2 className="mt-3 font-serif text-4xl text-navy">
@@ -766,7 +766,7 @@ export default function Home() {
               <div className="mt-10">
                 <Link
                   href="#find-os"
-                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-cobalt px-10 py-4 text-lg font-medium text-white transition-all hover:bg-royal hover:shadow-lg hover:-translate-y-0.5"
+                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-navy px-10 py-4 text-lg font-medium text-white transition-all hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Book Gratis Pr&oslash;vetr&aelig;ning
                 </Link>

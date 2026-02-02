@@ -94,7 +94,7 @@ export default function OmOsPage() {
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <span className="text-sm uppercase tracking-widest text-cobalt">
+                <span className="text-sm uppercase tracking-widest text-navy">
                   Hvad er EMS
                 </span>
                 <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -114,7 +114,7 @@ export default function OmOsPage() {
                 </p>
                 <Link
                   href="/#hvad-er-ems"
-                  className="mt-6 inline-flex items-center text-cobalt font-medium hover:text-royal transition-colors"
+                  className="mt-6 inline-flex items-center text-navy font-medium hover:text-navy-light transition-colors"
                 >
                   L&aelig;s mere om EMS &rarr;
                 </Link>
@@ -127,7 +127,7 @@ export default function OmOsPage() {
         <section className="bg-baby-blue py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm font-medium uppercase tracking-widest text-cobalt">
+              <span className="text-sm font-medium uppercase tracking-widest text-navy">
                 Vores V&aelig;rdier
               </span>
               <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -138,7 +138,7 @@ export default function OmOsPage() {
             <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-10 md:grid-cols-3">
               {values.map((value, index) => (
                 <ScrollReveal key={value.title} delay={index * 150}>
-                  <div className="border-l-2 border-cobalt pl-6">
+                  <div className="border-l-2 border-navy pl-6">
                     <h3 className="font-serif text-xl text-navy">
                       {value.title}
                     </h3>
@@ -156,7 +156,7 @@ export default function OmOsPage() {
         <section className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-cobalt">
+              <span className="text-sm uppercase tracking-widest text-navy">
                 Teamet
               </span>
               <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
@@ -179,7 +179,7 @@ export default function OmOsPage() {
                     <h3 className="mt-4 font-serif text-xl text-navy">
                       {trainer.name}
                     </h3>
-                    <p className="mt-1 text-sm text-cobalt">{trainer.role}</p>
+                    <p className="mt-1 text-sm text-navy">{trainer.role}</p>
                     <p className="mt-2 leading-relaxed text-slate">
                       {trainer.bio}
                     </p>
@@ -202,7 +202,7 @@ export default function OmOsPage() {
             </p>
             <Link
               href="/#find-os"
-              className="mt-8 inline-block rounded-lg bg-cobalt px-8 py-4 text-lg text-white transition-all hover:bg-royal hover:shadow-lg hover:-translate-y-0.5"
+              className="mt-8 inline-block rounded-lg bg-navy px-8 py-4 text-lg text-white transition-all hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5"
             >
               Book Gratis Pr&oslash;vetr&aelig;ning
             </Link>

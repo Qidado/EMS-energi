@@ -1,6 +1,6 @@
 /* ============================================
    WavyLines — Horizontal wavy line pattern
-   Decorative accent in cobalt (#1E4AE9)
+   Decorative accent in navy (#0F1C3F)
    ============================================ */
 
 interface WavyLinesProps {
@@ -11,7 +11,7 @@ interface WavyLinesProps {
 
 export default function WavyLines({
   lines = 3,
-  color = "#1E4AE9",
+  color = "#0F1C3F",
   className = "",
 }: WavyLinesProps) {
   const lineSpacing = 8;

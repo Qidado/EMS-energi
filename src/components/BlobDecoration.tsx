@@ -18,7 +18,7 @@ const sizeMap: Record<string, string> = {
 };
 
 const colorMap: Record<string, string> = {
-  "blue": "#1E4AE9",
+  "blue": "#0F1C3F",
   "navy": "#0F1C3F",
 };
 

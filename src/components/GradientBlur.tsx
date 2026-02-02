@@ -26,7 +26,7 @@ const sizeMap: Record<string, string> = {
 
 const colorMap: Record<string, string> = {
   gray: "#D6E5F5",
-  blue: "#1E4AE9",
+  blue: "#0F1C3F",
 };
 
 export default function GradientBlur({

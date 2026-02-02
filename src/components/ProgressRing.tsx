@@ -54,7 +54,7 @@ export default function ProgressRing({
           cy={dimension / 2}
           r={radius}
           fill="none"
-          stroke="#1E4AE9"
+          stroke="#0F1C3F"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
           strokeDasharray={circumference}

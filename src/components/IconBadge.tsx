@@ -19,7 +19,7 @@ const sizeMap: Record<string, { container: string; icon: string }> = {
 
 const variantMap: Record<string, { bg: string; text: string }> = {
   default: { bg: "bg-gray-100", text: "text-gray-600" },
-  orange: { bg: "bg-cobalt/10", text: "text-cobalt" },
+  orange: { bg: "bg-navy/10", text: "text-navy" },
 };
 
 export default function IconBadge({

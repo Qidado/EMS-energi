@@ -4,7 +4,7 @@
    ============================================ */
 
 interface StatCardProps {
-  accentColor?: "gray" | "success" | "warning" | "cobalt";
+  accentColor?: "gray" | "success" | "warning" | "navy";
   children: React.ReactNode;
   className?: string;
 }
@@ -13,11 +13,11 @@ const accentColorMap: Record<string, string> = {
   gray: "#CBD5E1",
   success: "#10B981",
   warning: "#F59E0B",
-  cobalt: "#1E4AE9",
+  navy: "#0F1C3F",
 };
 
 export default function StatCard({
-  accentColor = "cobalt",
+  accentColor = "navy",
   children,
   className = "",
 }: StatCardProps) {
