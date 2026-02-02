@@ -145,7 +145,7 @@ export default function ContactForm() {
               V&aelig;lg et emne
             </option>
             <option value="generel">Generel henvendelse</option>
-            <option value="prøvetræning">Book pr&oslash;vetr&aelig;ning</option>
+            <option value="træning">Book tr&aelig;ning</option>
             <option value="medlemskab">Medlemskab</option>
             <option value="samarbejde">Samarbejde</option>
           </select>

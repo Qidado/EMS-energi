@@ -46,6 +46,14 @@ const testimonials: Testimonial[] = [
     role: "Expat",
     memberSince: "Medlem siden 2025",
   },
+  // TODO: Get real testimonial from a mom client
+  {
+    quote:
+      "Efter min fødsel havde jeg ingen tid til træning. Med EMS får jeg en fuld træning på 20 minutter — og kan mærke min core kommer tilbage.",
+    name: "[Navn]",
+    role: "Nybagt mor",
+    memberSince: "Medlem siden 2025",
+  },
 ];
 
 export default function TestimonialCarousel() {

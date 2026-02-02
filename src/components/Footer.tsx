@@ -82,7 +82,6 @@ const footerTraening = [
 ];
 
 const footerInfo = [
-  { href: "/om-os", label: "Om Os" },
   { href: "/#priser", label: "Priser" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#find-os", label: "Kontakt" },

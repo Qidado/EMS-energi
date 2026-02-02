@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://emsenergi.dk"),
   title: "EMS Energi | EMS Træning i København",
   description:
-    "Oplev kraften af EMS træning hos EMS Energi. 20 minutters effektiv træning der svarer til flere timers konventionel træning. Book din gratis prøvetræning i dag.",
+    "Oplev kraften af EMS træning hos EMS Energi. 20 minutters effektiv træning der svarer til flere timers konventionel træning. Også efterfødselstræning. Book din første EMS session i dag.",
   keywords: [
     "EMS træning",
     "EMS København",

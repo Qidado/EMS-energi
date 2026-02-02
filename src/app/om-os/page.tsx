@@ -198,13 +198,13 @@ export default function OmOsPage() {
             </h2>
             <p className="mt-4 text-lg text-slate">
               Tag det f&oslash;rste skridt mod en st&aelig;rkere og sundere dig.
-              Book din gratis pr&oslash;vetr&aelig;ning i dag.
+              Book din f&oslash;rste session i dag.
             </p>
             <Link
               href="/#find-os"
               className="mt-8 inline-block rounded-lg bg-navy px-8 py-4 text-lg text-white transition-all hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5"
             >
-              Book Gratis Pr&oslash;vetr&aelig;ning
+              Book Din F&oslash;rste Session
             </Link>
           </ScrollReveal>
         </section>

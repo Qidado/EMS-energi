@@ -23,15 +23,6 @@ interface NavItem {
    ============================================ */
 
 const navLinks: NavItem[] = [
-  {
-    href: "/om-os",
-    label: "Om Os",
-    children: [
-      { href: "/om-os", label: "Vores historie" },
-      { href: "/#team", label: "Mød teamet" },
-      { href: "#hvad-er-ems", label: "Hvad er EMS?" },
-    ],
-  },
   { href: "/#priser", label: "Priser" },
   { href: "/virksomheder", label: "For Virksomheder" },
   { href: "/#find-os", label: "Kontakt" },
@@ -137,10 +128,10 @@ export default function Navigation() {
       {announcementVisible && (
         <div className="bg-navy py-1.5 px-3 sm:py-2.5 sm:px-4 text-center relative">
           <Link
-            href="#find-os"
+            href="/booking"
             className="text-white text-xs sm:text-sm hover:text-white/80 transition-colors duration-200"
           >
-            Pr&oslash;v EMS &mdash; F&oslash;rste tr&aelig;ning gratis! &rarr;
+            Pr&oslash;v EMS &mdash; Book din f&oslash;rste session &rarr;
           </Link>
           <button
             onClick={() => setAnnouncementVisible(false)}
@@ -215,7 +206,7 @@ export default function Navigation() {
             {/* Desktop Right — CTA only */}
             <div className="hidden md:flex items-center">
               <Link
-                href="#find-os"
+                href="/booking"
                 className="bg-navy text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:bg-navy-light transition-colors duration-200"
               >
                 Book Tr&aelig;ning
@@ -307,7 +298,7 @@ export default function Navigation() {
 
             <div className="pt-4">
               <Link
-                href="#find-os"
+                href="/booking"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block bg-navy text-white text-sm font-medium px-5 py-3 rounded-lg text-center hover:bg-navy-light transition-colors duration-200"
               >
