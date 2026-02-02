@@ -228,9 +228,9 @@ export default function Footer() {
             >
               <div className="space-y-3 text-white/70 text-sm leading-relaxed">
                 <p>
-                  Vesterbrogade 42,
+                  Nordre Frihavnsgade 65, kl. tv,
                   <br />
-                  1620 K&oslash;benhavn V
+                  2100 &Oslash;sterbro
                 </p>
                 <p>
                   <a
@@ -265,12 +265,12 @@ export default function Footer() {
               onToggle={() => toggle("virksomhed")}
             >
               <div className="space-y-3 text-white/70 text-sm leading-relaxed">
-                <p>EMS Energi ApS</p>
-                <p>CVR: [INSERT REAL CVR]</p>
+                <p>EMS energi ApS</p>
+                <p>CVR: 46056345</p>
                 <p>
-                  Vesterbrogade 42,
+                  Nordre Frihavnsgade 65, kl. tv,
                   <br />
-                  1620 K&oslash;benhavn V
+                  2100 &Oslash;sterbro
                 </p>
               </div>
             </AccordionColumn>

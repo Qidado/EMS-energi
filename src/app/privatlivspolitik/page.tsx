@@ -29,12 +29,12 @@ export default function PrivatlivspolitikPage() {
             <section>
               <h2 className="font-serif text-xl text-black mb-3">1. Dataansvarlig</h2>
               <p>
-                EMS Energi ApS er dataansvarlig for behandlingen af de
+                EMS energi ApS er dataansvarlig for behandlingen af de
                 personoplysninger, vi modtager om dig. Du kan kontakte os
                 p&aring;:
               </p>
               <ul className="mt-2 list-disc pl-6 space-y-1">
-                <li>EMS Energi ApS, Vesterbrogade 42, 1620 K&oslash;benhavn V</li>
+                <li>EMS energi ApS, Nordre Frihavnsgade 65, kl. tv, 2100 &Oslash;sterbro</li>
                 <li>E-mail: info@emsenergi.dk</li>
                 <li>Telefon: +45 31 42 53 64</li>
               </ul>

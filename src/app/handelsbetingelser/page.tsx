@@ -30,8 +30,8 @@ export default function HandelsbetingelserPage() {
               <h2 className="font-serif text-xl text-black mb-3">1. Generelt</h2>
               <p>
                 Disse handelsbetingelser g&aelig;lder for alle medlemskaber og
-                ydelser hos EMS Energi ApS, Vesterbrogade 42, 1620
-                K&oslash;benhavn V. Ved tilmelding accepterer du disse vilk&aring;r.
+                ydelser hos EMS energi ApS, Nordre Frihavnsgade 65, kl. tv, 2100
+                &Oslash;sterbro. Ved tilmelding accepterer du disse vilk&aring;r.
               </p>
             </section>
 

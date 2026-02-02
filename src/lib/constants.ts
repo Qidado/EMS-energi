@@ -8,8 +8,8 @@ export const SITE_URL = "https://emsenergi.dk";
 export const CONTACT = {
   phone: "+45 31 42 53 64",
   email: "info@emsenergi.dk",
-  address: "Vesterbrogade 42",
-  city: "1620 København V",
+  address: "Nordre Frihavnsgade 65, kl. tv",
+  city: "2100 Østerbro",
   instagram: "@emsenergi",
 } as const;
 

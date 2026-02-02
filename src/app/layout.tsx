@@ -57,21 +57,21 @@ export default function RootLayout({
               "@type": "HealthClub",
               name: "EMS Energi",
               description:
-                "EMS træningsstudie på Vesterbro, København. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation.",
+                "EMS træningsstudie på Østerbro, København. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation.",
               url: "https://emsenergi.dk",
               telephone: "+4531425364",
               email: "info@emsenergi.dk",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Vesterbrogade 42",
-                addressLocality: "København V",
-                postalCode: "1620",
+                streetAddress: "Nordre Frihavnsgade 65, kl. tv",
+                addressLocality: "Østerbro",
+                postalCode: "2100",
                 addressCountry: "DK",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 55.6711,
-                longitude: 12.5558,
+                latitude: 55.7020,
+                longitude: 12.5870,
               },
               openingHoursSpecification: [
                 {

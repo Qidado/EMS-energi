@@ -24,12 +24,12 @@ const personaIcons = {
 } as const;
 
 export const metadata: Metadata = {
-  title: "EMS Energi | EMS Træning København Vesterbro — 20 min effektiv træning",
+  title: "EMS Energi | EMS Træning København Østerbro — 20 min effektiv træning",
   description:
-    "EMS træning i København Vesterbro. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation. Aktiverer 90% af dine muskler. Book gratis prøvetræning hos EMS Energi.",
+    "EMS træning i København Østerbro. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation. Aktiverer 90% af dine muskler. Book gratis prøvetræning hos EMS Energi.",
   keywords: [
     "EMS træning København",
-    "EMS Vesterbro",
+    "EMS Østerbro",
     "elektrisk muskelstimulation",
     "20 min træning",
     "gratis prøvetræning",
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "EMS Energi | EMS Træning København Vesterbro — 20 min effektiv træning",
+    title: "EMS Energi | EMS Træning København Østerbro — 20 min effektiv træning",
     description:
-      "EMS træning i København Vesterbro. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation. Book gratis prøvetræning.",
+      "EMS træning i København Østerbro. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation. Book gratis prøvetræning.",
     locale: "da_DK",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EMS Energi | EMS Træning København Vesterbro",
+    title: "EMS Energi | EMS Træning København Østerbro",
     description:
       "20 minutters effektiv helkropstræning med elektrisk muskelstimulation. Book gratis prøvetræning hos EMS Energi.",
   },
@@ -691,7 +691,7 @@ export default function Home() {
                 Find Os
               </span>
               <h2 className="mt-3 font-serif text-4xl text-black">
-                Centralt p&aring; Vesterbro
+                Centralt p&aring; &Oslash;sterbro
               </h2>
             </ScrollReveal>
 
@@ -702,17 +702,17 @@ export default function Home() {
                   <div>
                     <h3 className="font-serif text-xl text-black mb-2">Adresse</h3>
                     <p className="text-secondary leading-relaxed">
-                      Vesterbrogade 42<br />
-                      1620 K&oslash;benhavn V
+                      Nordre Frihavnsgade 65, kl. tv<br />
+                      2100 &Oslash;sterbro
                     </p>
                   </div>
 
                   <div>
                     <h3 className="font-serif text-xl text-black mb-2">Transport</h3>
                     <p className="text-secondary leading-relaxed">
-                      &#x1F6B6; 5 min gang fra K&oslash;benhavn H<br />
-                      &#x1F6B2; 2 min fra Cykelruten<br />
-                      &#x1F697; Parkering i sidegaderne
+                      &#x1F6B6; 5 min gang fra Nordhavn St.<br />
+                      &#x1F6B2; Direkte adgang fra cykelstien<br />
+                      &#x1F697; Gratis parkering i sidegaderne
                     </p>
                   </div>
 
@@ -736,7 +736,7 @@ export default function Home() {
 
               {/* Right — Map placeholder */}
               <ScrollReveal delay={150}>
-                {/* TODO: Add Google Maps embed — Vesterbrogade 42, 1620 København V */}
+                {/* TODO: Add Google Maps embed — Nordre Frihavnsgade 65, kl. tv, 2100 Østerbro */}
                 <div className="bg-warm-grey rounded-xl h-full min-h-[400px] flex items-center justify-center">
                   <span className="text-secondary font-serif text-lg">Google Maps</span>
                 </div>
