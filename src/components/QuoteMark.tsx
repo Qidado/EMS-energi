@@ -1,6 +1,6 @@
 /* ============================================
    QuoteMark — Large decorative opening quote
-   Orange (#FF5A00), serif font, 6rem
+   Baby blue (#D6E5F5), serif font, 6rem
    ============================================ */
 
 interface QuoteMarkProps {
@@ -10,7 +10,7 @@ interface QuoteMarkProps {
 }
 
 export default function QuoteMark({
-  color = "#FF5A00",
+  color = "#D6E5F5",
   size = "6rem",
   className = "",
 }: QuoteMarkProps) {

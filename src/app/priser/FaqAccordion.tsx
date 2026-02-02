@@ -24,10 +24,10 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
         const isOpen = openIndex === index;
 
         return (
-          <div key={index} className="border-b border-cream-dark py-5">
+          <div key={index} className="border-b border-border-medium py-5">
             <button
               onClick={() => toggle(index)}
-              className="flex w-full items-center justify-between text-left font-serif text-lg text-black"
+              className="flex w-full items-center justify-between text-left font-serif text-lg text-navy"
               aria-expanded={isOpen}
             >
               <span className="pr-4">{item.question}</span>
@@ -39,7 +39,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                className={`h-6 w-6 shrink-0 text-orange-text transition-transform duration-300 ${
+                className={`h-6 w-6 shrink-0 text-cobalt transition-transform duration-300 ${
                   isOpen ? "rotate-45" : "rotate-0"
                 }`}
               >
@@ -56,7 +56,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="pt-3 leading-relaxed text-gray-dark">
+                <p className="pt-3 leading-relaxed text-slate">
                   {item.answer}
                 </p>
               </div>

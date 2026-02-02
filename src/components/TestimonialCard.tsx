@@ -60,7 +60,7 @@ export default function TestimonialCard({
     <div className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center ${className}`}>
       {/* Decorative opening quote mark */}
       <div
-        className="font-serif text-8xl text-signal-orange/30 leading-none select-none mb-4"
+        className="font-serif text-8xl text-baby-blue leading-none select-none mb-4"
         aria-hidden="true"
       >
         &ldquo;
@@ -73,24 +73,24 @@ export default function TestimonialCard({
           transition: "opacity 0.3s ease-in-out",
         }}
       >
-        <blockquote className="font-serif text-2xl md:text-3xl italic text-black leading-relaxed">
+        <blockquote className="font-serif text-2xl md:text-3xl italic text-navy leading-relaxed">
           &ldquo;{current.quote}&rdquo;
         </blockquote>
 
         {/* Member avatar placeholder */}
-        <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-warm-grey">
-          <span className="font-serif text-sm font-medium text-secondary">
+        <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-baby-blue">
+          <span className="font-serif text-sm font-medium text-slate">
             {current.name.split(" ").slice(0, 2).map((n) => n[0]).join("")}
           </span>
         </div>
 
-        <p className="text-black mt-4 font-medium">
+        <p className="text-navy mt-4 font-medium">
           {current.name}
         </p>
-        <p className="text-sm text-orange-text mt-1">
+        <p className="text-sm text-cobalt mt-1">
           {current.role}
         </p>
-        <p className="text-xs text-secondary mt-1">
+        <p className="text-xs text-slate mt-1">
           {current.memberSince}
         </p>
       </div>
@@ -105,8 +105,8 @@ export default function TestimonialCard({
               aria-label={`Gå til udtalelse ${index + 1}`}
               className={`rounded-full transition-all duration-300 ${
                 index === active
-                  ? "bg-signal-orange w-2.5 h-2.5"
-                  : "bg-signal-orange/20 w-2.5 h-2.5 hover:bg-signal-orange/40"
+                  ? "bg-cobalt w-2.5 h-2.5"
+                  : "bg-cobalt/20 w-2.5 h-2.5 hover:bg-cobalt/40"
               }`}
             />
           ))}

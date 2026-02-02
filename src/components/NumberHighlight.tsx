@@ -17,7 +17,7 @@ export default function NumberHighlight({
 }: NumberHighlightProps) {
   return (
     <div className={`text-center ${className}`}>
-      <div className="inline-block rounded-xl bg-signal-orange/10 px-6 py-4">
+      <div className="inline-block rounded-xl bg-cobalt/10 px-6 py-4">
         <span
           className="block font-mono text-3xl sm:text-4xl md:text-5xl font-bold tabular-nums text-gray-900"
           style={{ letterSpacing: "-0.02em" }}

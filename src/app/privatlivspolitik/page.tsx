@@ -18,16 +18,16 @@ export default function PrivatlivspolitikPage() {
 
       <main id="main-content" className="bg-cream pt-28 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20">
         <div className="mx-auto max-w-3xl px-6">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-black">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-navy">
             Privatlivspolitik
           </h1>
           <p className="mt-4 text-sm text-secondary">
             Sidst opdateret: 1. januar 2026
           </p>
 
-          <div className="mt-10 space-y-8 text-gray-dark leading-relaxed">
+          <div className="mt-10 space-y-8 text-slate leading-relaxed">
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">1. Dataansvarlig</h2>
+              <h2 className="font-serif text-xl text-navy mb-3">1. Dataansvarlig</h2>
               <p>
                 EMS energi ApS er dataansvarlig for behandlingen af de
                 personoplysninger, vi modtager om dig. Du kan kontakte os
@@ -41,7 +41,7 @@ export default function PrivatlivspolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 2. Hvilke oplysninger indsamler vi?
               </h2>
               <p>Vi indsamler og behandler f&oslash;lgende personoplysninger:</p>
@@ -55,7 +55,7 @@ export default function PrivatlivspolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 3. Form&aring;l med behandlingen
               </h2>
               <p>Vi behandler dine personoplysninger til f&oslash;lgende form&aring;l:</p>
@@ -69,7 +69,7 @@ export default function PrivatlivspolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 4. Retsgrundlag
               </h2>
               <p>
@@ -81,7 +81,7 @@ export default function PrivatlivspolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 5. Opbevaringsperiode
               </h2>
               <p>
@@ -94,7 +94,7 @@ export default function PrivatlivspolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 6. Dine rettigheder
               </h2>
               <p>Du har ret til:</p>
@@ -113,7 +113,7 @@ export default function PrivatlivspolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 7. Sikkerhed
               </h2>
               <p>

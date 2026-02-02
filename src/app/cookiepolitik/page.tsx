@@ -18,16 +18,16 @@ export default function CookiepolitikPage() {
 
       <main id="main-content" className="bg-cream pt-28 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20">
         <div className="mx-auto max-w-3xl px-6">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-black">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-navy">
             Cookiepolitik
           </h1>
           <p className="mt-4 text-sm text-secondary">
             Sidst opdateret: 1. januar 2026
           </p>
 
-          <div className="mt-10 space-y-8 text-gray-dark leading-relaxed">
+          <div className="mt-10 space-y-8 text-slate leading-relaxed">
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 1. Hvad er cookies?
               </h2>
               <p>
@@ -39,11 +39,11 @@ export default function CookiepolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 2. Cookies vi bruger
               </h2>
 
-              <h3 className="font-medium text-black mt-4 mb-2">
+              <h3 className="font-medium text-navy mt-4 mb-2">
                 N&oslash;dvendige cookies
               </h3>
               <p>
@@ -51,7 +51,7 @@ export default function CookiepolitikPage() {
                 fungere korrekt. De kan ikke sl&aring;s fra.
               </p>
 
-              <h3 className="font-medium text-black mt-4 mb-2">
+              <h3 className="font-medium text-navy mt-4 mb-2">
                 Statistik-cookies
               </h3>
               <p>
@@ -61,7 +61,7 @@ export default function CookiepolitikPage() {
                 brugeroplevelsen.
               </p>
 
-              <h3 className="font-medium text-black mt-4 mb-2">
+              <h3 className="font-medium text-navy mt-4 mb-2">
                 Marketing-cookies
               </h3>
               <p>
@@ -71,7 +71,7 @@ export default function CookiepolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 3. Samtykke
               </h2>
               <p>
@@ -83,7 +83,7 @@ export default function CookiepolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 4. Sletning af cookies
               </h2>
               <p>
@@ -94,7 +94,7 @@ export default function CookiepolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 5. Tredjepartscookies
               </h2>
               <p>
@@ -106,7 +106,7 @@ export default function CookiepolitikPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 6. Kontakt
               </h2>
               <p>

@@ -137,8 +137,8 @@ export default function Footer() {
 
   return (
     <>
-      <WaveDivider color="#0A0A0A" />
-      <footer className="bg-black border-t border-black">
+      <WaveDivider color="#0F1C3F" />
+      <footer className="bg-navy border-t border-navy">
         <div className="max-w-7xl mx-auto py-16 px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-8">
             {/* Col 1: Brand */}
@@ -154,7 +154,7 @@ export default function Footer() {
                   href="https://instagram.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-signal-orange transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-cobalt transition-colors duration-200"
                   aria-label="Instagram"
                 >
                   <InstagramIcon />
@@ -163,7 +163,7 @@ export default function Footer() {
                   href="https://facebook.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-signal-orange transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-cobalt transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <FacebookIcon />
@@ -172,7 +172,7 @@ export default function Footer() {
                   href="https://linkedin.com/company/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-signal-orange transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-cobalt transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <LinkedInIcon />

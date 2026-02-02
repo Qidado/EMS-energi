@@ -277,13 +277,13 @@ export default function Home() {
               {/* Text column */}
               <div>
                 <ScrollReveal>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-orange-text">
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
                     EMS Fitness Studio
                   </span>
                 </ScrollReveal>
 
                 <ScrollReveal delay={100}>
-                  <h1 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight text-black">
+                  <h1 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight text-navy">
                     20 minutter.
                     <br />
                     Hele kroppen.
@@ -291,7 +291,7 @@ export default function Home() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={200}>
-                  <p className="mt-6 max-w-lg text-lg leading-relaxed text-secondary">
+                  <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate">
                     EMS tr&aelig;ning aktiverer 90% af dine muskler samtidig.
                     Effektiv helkropstr&aelig;ning der passer ind mellem dine
                     m&oslash;der — med m&aring;lbare resultater.
@@ -302,14 +302,14 @@ export default function Home() {
                   <div className="mt-8">
                     <Link
                       href="#find-os"
-                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-signal-orange px-8 py-4 font-medium text-white transition-all hover:bg-orange-hover hover:shadow-lg hover:-translate-y-0.5"
+                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-cobalt px-8 py-4 font-medium text-white transition-all hover:bg-royal hover:shadow-lg hover:-translate-y-0.5"
                     >
                       Book Gratis Pr&oslash;vetr&aelig;ning
                     </Link>
                   </div>
                   <Link
                     href="#hvad-er-ems"
-                    className="mt-4 block text-sm text-secondary transition-colors hover:text-black"
+                    className="mt-4 block text-sm text-slate transition-colors hover:text-navy"
                   >
                     Se hvordan det virker &darr;
                   </Link>
@@ -319,8 +319,8 @@ export default function Home() {
               {/* Image placeholder */}
               <ScrollReveal delay={200}>
                 {/* TODO: Replace with hero image — person mid-EMS-session, professional setting */}
-                <div className="hidden md:flex aspect-[3/4] items-center justify-center rounded-xl bg-warm-grey">
-                  <span className="font-serif text-xl text-secondary">
+                <div className="hidden md:flex aspect-[3/4] items-center justify-center rounded-xl bg-baby-blue">
+                  <span className="font-serif text-xl text-slate">
                     Hero billede
                   </span>
                 </div>
@@ -337,21 +337,21 @@ export default function Home() {
             <div className="grid items-center gap-8 md:gap-16 md:grid-cols-2">
               <ScrollReveal>
                 {/* TODO: Replace with photo of trainer adjusting electrodes on client */}
-                <div className="flex aspect-[4/3] max-h-[280px] sm:max-h-none items-center justify-center rounded-xl bg-warm-grey">
-                  <span className="font-serif text-xl text-secondary">
+                <div className="flex aspect-[4/3] max-h-[280px] sm:max-h-none items-center justify-center rounded-xl bg-baby-blue">
+                  <span className="font-serif text-xl text-slate">
                     Tr&aelig;ner justerer elektroder p&aring; klient
                   </span>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <span className="text-sm uppercase tracking-widest text-orange-text">
+                <span className="text-sm uppercase tracking-widest text-cobalt">
                   Hvad er EMS
                 </span>
-                <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
+                <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
                   Elektrisk Muskelstimulation
                 </h2>
-                <p className="mt-6 leading-relaxed text-secondary">
+                <p className="mt-6 leading-relaxed text-slate">
                   EMS sender kontrollerede elektriske impulser direkte til
                   dine muskler gennem en specialdesignet dragt. Mens du
                   udf&oslash;rer simple &oslash;velser, aktiveres over 300
@@ -359,14 +359,14 @@ export default function Home() {
                   muskler, som konventionel tr&aelig;ning sj&aelig;ldent
                   rammer.
                 </p>
-                <p className="mt-4 leading-relaxed text-secondary">
+                <p className="mt-4 leading-relaxed text-slate">
                   En 20-minutters session giver effektiv
                   helkropstr&aelig;ning. Sk&aring;nsomt for led og ryg.
                   Velegnet til alle niveauer.
                 </p>
                 <Link
                   href="#fordele"
-                  className="mt-6 inline-flex items-center text-orange-text font-medium hover:text-orange-hover transition-colors"
+                  className="mt-6 inline-flex items-center text-cobalt font-medium hover:text-royal transition-colors"
                 >
                   Se fordelene &rarr;
                 </Link>
@@ -378,13 +378,13 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             3. Who is it for (from om-os — personas)
         ────────────────────────────────────────────── */}
-        <section id="hvem-er-det-for" className="bg-warm-grey py-12 sm:py-16 md:py-24">
+        <section id="hvem-er-det-for" className="bg-baby-blue py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-orange-text">
+              <span className="text-sm uppercase tracking-widest text-cobalt">
                 Hvem er det for
               </span>
-              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-black">
+              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
                 EMS passer til dig
               </h2>
             </ScrollReveal>
@@ -394,12 +394,12 @@ export default function Home() {
                 const IconComponent = personaIcons[persona.icon];
                 return (
                   <ScrollReveal key={persona.title} delay={index * 100}>
-                    <div className="rounded-xl border border-black/[0.06] bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                      <IconComponent className="h-6 w-6 text-orange-text" strokeWidth={1.5} />
-                      <h3 className="mt-4 font-serif text-lg text-black">
+                    <div className="rounded-xl border border-navy/[0.06] bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                      <IconComponent className="h-6 w-6 text-cobalt" strokeWidth={1.5} />
+                      <h3 className="mt-4 font-serif text-lg text-navy">
                         {persona.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-secondary">
+                      <p className="mt-2 text-sm leading-relaxed text-slate">
                         {persona.body}
                       </p>
                     </div>
@@ -416,7 +416,7 @@ export default function Home() {
         <section id="fordele" className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <h2 className="font-serif text-4xl text-black">
+              <h2 className="font-serif text-4xl text-navy">
                 Hvorfor v&aelig;lge EMS?
               </h2>
             </ScrollReveal>
@@ -425,13 +425,13 @@ export default function Home() {
               {whyEms.map((item, index) => (
                 <ScrollReveal key={item.number} delay={index * 150}>
                   <div className="relative pt-10 md:pt-12">
-                    <span className="absolute top-0 left-0 font-serif text-5xl md:text-7xl font-bold leading-none text-black/[0.06] select-none">
+                    <span className="absolute top-0 left-0 font-serif text-5xl md:text-7xl font-bold leading-none text-navy/[0.06] select-none">
                       {item.number}
                     </span>
-                    <h3 className="font-serif text-xl text-black">
+                    <h3 className="font-serif text-xl text-navy">
                       {item.title}
                     </h3>
-                    <p className="mt-3 leading-relaxed text-secondary">
+                    <p className="mt-3 leading-relaxed text-slate">
                       {item.body}
                     </p>
                   </div>
@@ -444,13 +444,13 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             5. First Session Process (from om-os — timeline)
         ────────────────────────────────────────────── */}
-        <section id="din-foerste-session" className="bg-warm-grey py-12 sm:py-16 md:py-24">
+        <section id="din-foerste-session" className="bg-baby-blue py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-orange-text">
+              <span className="text-sm uppercase tracking-widest text-cobalt">
                 Din f&oslash;rste session
               </span>
-              <h2 className="mt-3 font-serif text-4xl text-black">
+              <h2 className="mt-3 font-serif text-4xl text-navy">
                 S&aring;dan foreg&aring;r det
               </h2>
             </ScrollReveal>
@@ -458,25 +458,25 @@ export default function Home() {
             {/* Responsive timeline — vertical on mobile, horizontal on desktop */}
             <div className="relative mt-10 md:mt-16">
               {/* Connector line: vertical on mobile, horizontal on desktop */}
-              <div className="pointer-events-none absolute left-5 top-0 bottom-0 w-px bg-signal-orange/20 md:left-[12.5%] md:right-[12.5%] md:top-8 md:bottom-auto md:h-px md:w-auto" />
+              <div className="pointer-events-none absolute left-5 top-0 bottom-0 w-px bg-cobalt/20 md:left-[12.5%] md:right-[12.5%] md:top-8 md:bottom-auto md:h-px md:w-auto" />
 
               <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-4">
                 {steps.map((step, index) => (
                   <ScrollReveal key={step.number} delay={index * 100}>
                     <div className="relative grid grid-cols-[40px_1fr] gap-4 md:grid-cols-none md:text-center md:px-4">
-                      <span className="relative z-10 font-serif text-3xl md:text-5xl font-bold leading-none text-signal-orange/15 text-center select-none md:block">
+                      <span className="relative z-10 font-serif text-3xl md:text-5xl font-bold leading-none text-cobalt/15 text-center select-none md:block">
                         {step.number}
                       </span>
                       <div>
-                        <h3 className="font-serif text-lg text-black md:mt-3">
+                        <h3 className="font-serif text-lg text-navy md:mt-3">
                           {step.title}
                         </h3>
                         {step.subtitle && (
-                          <span className="mt-1 md:mt-2 inline-block rounded-full bg-signal-orange/10 px-3 py-0.5 text-sm font-medium text-orange-text">
+                          <span className="mt-1 md:mt-2 inline-block rounded-full bg-cobalt/10 px-3 py-0.5 text-sm font-medium text-cobalt">
                             {step.subtitle}
                           </span>
                         )}
-                        <p className="mt-2 text-sm leading-relaxed text-secondary">
+                        <p className="mt-2 text-sm leading-relaxed text-slate">
                           {step.body}
                         </p>
                       </div>
@@ -489,7 +489,7 @@ export default function Home() {
             <ScrollReveal className="mt-16 text-center">
               <Link
                 href="#find-os"
-                className="inline-flex items-center font-medium text-orange-text transition-colors hover:text-orange-hover"
+                className="inline-flex items-center font-medium text-cobalt transition-colors hover:text-royal"
               >
                 Book din f&oslash;rste session &rarr;
               </Link>
@@ -502,7 +502,7 @@ export default function Home() {
         ────────────────────────────────────────────── */}
         <section id="udtalelser" className="bg-off-white py-12 sm:py-16 md:py-24 lg:py-32">
           <ScrollReveal>
-            <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-orange-text">
+            <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
               Hvad vores medlemmer siger
             </p>
           </ScrollReveal>
@@ -519,10 +519,10 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal>
               <div className="text-center">
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-orange-text">
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
                   Medlemskab
                 </span>
-                <h2 className="mt-4 font-serif text-4xl text-black">
+                <h2 className="mt-4 font-serif text-4xl text-navy">
                   V&aelig;lg den rette plan
                 </h2>
               </div>
@@ -534,41 +534,41 @@ export default function Home() {
                   <div
                     className={`relative flex h-full flex-col rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
                       plan.featured
-                        ? "border-2 border-signal-orange shadow-lg mt-6 sm:mt-0"
-                        : "border-2 border-warm-grey-dark"
+                        ? "border-2 border-cobalt shadow-lg mt-6 sm:mt-0"
+                        : "border-2 border-border-medium"
                     }`}
                   >
                     {/* Featured badge */}
                     {plan.featured && (
                       <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <span className="rounded-full bg-signal-orange px-5 py-1.5 text-sm text-white">
+                        <span className="rounded-full bg-cobalt px-5 py-1.5 text-sm text-white">
                           Mest Popul&aelig;r
                         </span>
                       </div>
                     )}
 
                     {/* Plan name */}
-                    <h3 className="font-serif text-2xl text-black">
+                    <h3 className="font-serif text-2xl text-navy">
                       {plan.name}
                     </h3>
                     {plan.subtitle && (
-                      <p className="mt-1 text-sm text-secondary">
+                      <p className="mt-1 text-sm text-slate">
                         {plan.subtitle}
                       </p>
                     )}
 
                     {/* Price */}
                     <div className="mt-4 flex items-baseline gap-1">
-                      <span className="font-serif text-4xl text-black">
+                      <span className="font-serif text-4xl text-navy">
                         {plan.price}
                       </span>
                       {plan.priceSuffix && (
-                        <span className="text-secondary">{plan.priceSuffix}</span>
+                        <span className="text-slate">{plan.priceSuffix}</span>
                       )}
                     </div>
 
                     {/* Description */}
-                    <p className="mt-3 leading-relaxed text-secondary">
+                    <p className="mt-3 leading-relaxed text-slate">
                       {plan.description}
                     </p>
 
@@ -576,8 +576,8 @@ export default function Home() {
                     <ul className="mt-6 space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <span className="mt-0.5 text-orange-text">&#10003;</span>
-                          <span className="text-black">{feature}</span>
+                          <span className="mt-0.5 text-cobalt">&#10003;</span>
+                          <span className="text-navy">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -588,8 +588,8 @@ export default function Home() {
                         href="#find-os"
                         className={`block w-full rounded-lg py-3 text-center font-medium transition ${
                           plan.featured
-                            ? "bg-signal-orange text-white hover:bg-orange-hover"
-                            : "border-2 border-signal-orange text-orange-text hover:bg-signal-orange hover:text-white"
+                            ? "bg-cobalt text-white hover:bg-royal"
+                            : "border-2 border-cobalt text-cobalt hover:bg-cobalt hover:text-white"
                         }`}
                       >
                         {plan.cta}
@@ -600,13 +600,13 @@ export default function Home() {
               ))}
             </div>
 
-            <p className="mt-8 text-center text-sm text-secondary">
+            <p className="mt-8 text-center text-sm text-slate">
               Alle priser er inkl. moms.
             </p>
             <p className="mt-2 text-center">
               <Link
                 href="/virksomheder"
-                className="text-sm font-medium text-orange-text transition-colors hover:text-orange-hover"
+                className="text-sm font-medium text-cobalt transition-colors hover:text-royal"
               >
                 Se alle priser og firmapakker &rarr;
               </Link>
@@ -621,10 +621,10 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-orange-text">
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
                   Ofte Stillede Sp&oslash;rgsm&aring;l
                 </span>
-                <h2 className="mt-4 font-serif text-4xl text-black">
+                <h2 className="mt-4 font-serif text-4xl text-navy">
                   Svar p&aring; dine sp&oslash;rgsm&aring;l
                 </h2>
               </div>
@@ -645,13 +645,13 @@ export default function Home() {
         <section id="team" className="bg-off-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center">
-              <span className="text-sm uppercase tracking-widest text-orange-text">
+              <span className="text-sm uppercase tracking-widest text-cobalt">
                 M&oslash;d Tr&aelig;nerne
               </span>
-              <h2 className="mt-3 font-serif text-4xl text-black">
+              <h2 className="mt-3 font-serif text-4xl text-navy">
                 Dit team
               </h2>
-              <p className="mt-4 max-w-xl mx-auto text-lg text-secondary">
+              <p className="mt-4 max-w-xl mx-auto text-lg text-slate">
                 Certificerede instrukt&oslash;rer med passion for resultater.
               </p>
             </ScrollReveal>
@@ -661,17 +661,17 @@ export default function Home() {
                 <ScrollReveal key={index} delay={index * 150}>
                   <div className="transition hover:-translate-y-0.5 hover:shadow-md rounded-xl p-4">
                     {/* TODO: Professional headshot */}
-                    <div className="flex aspect-square w-full items-center justify-center rounded-xl bg-warm-grey">
-                      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-secondary">
+                    <div className="flex aspect-square w-full items-center justify-center rounded-xl bg-baby-blue">
+                      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-slate">
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                         <circle cx="12" cy="7" r="4" />
                       </svg>
                     </div>
-                    <h3 className="mt-4 font-serif text-xl text-black">
+                    <h3 className="mt-4 font-serif text-xl text-navy">
                       {trainer.name}
                     </h3>
-                    <p className="mt-1 text-sm text-orange-text">{trainer.role}</p>
-                    <p className="mt-2 leading-relaxed text-secondary">
+                    <p className="mt-1 text-sm text-cobalt">{trainer.role}</p>
+                    <p className="mt-2 leading-relaxed text-slate">
                       {trainer.bio}
                     </p>
                   </div>
@@ -687,10 +687,10 @@ export default function Home() {
         <section id="find-os" className="bg-white py-12 sm:py-16 md:py-24">
           <div className="mx-auto max-w-6xl px-6">
             <ScrollReveal className="text-center mb-16">
-              <span className="text-sm uppercase tracking-widest text-orange-text">
+              <span className="text-sm uppercase tracking-widest text-cobalt">
                 Find Os
               </span>
-              <h2 className="mt-3 font-serif text-4xl text-black">
+              <h2 className="mt-3 font-serif text-4xl text-navy">
                 Centralt p&aring; &Oslash;sterbro
               </h2>
             </ScrollReveal>
@@ -700,16 +700,16 @@ export default function Home() {
               <ScrollReveal>
                 <div className="space-y-8">
                   <div>
-                    <h3 className="font-serif text-xl text-black mb-2">Adresse</h3>
-                    <p className="text-secondary leading-relaxed">
+                    <h3 className="font-serif text-xl text-navy mb-2">Adresse</h3>
+                    <p className="text-slate leading-relaxed">
                       Nordre Frihavnsgade 65, kl. tv<br />
                       2100 &Oslash;sterbro
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-xl text-black mb-2">Transport</h3>
-                    <p className="text-secondary leading-relaxed">
+                    <h3 className="font-serif text-xl text-navy mb-2">Transport</h3>
+                    <p className="text-slate leading-relaxed">
                       &#x1F6B6; 5 min gang fra Nordhavn St.<br />
                       &#x1F6B2; Direkte adgang fra cykelstien<br />
                       &#x1F697; Gratis parkering i sidegaderne
@@ -717,16 +717,16 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-xl text-black mb-2">Kontakt</h3>
-                    <p className="text-secondary leading-relaxed">
-                      <a href="tel:+4531425364" className="hover:text-black transition-colors">+45 31 42 53 64</a><br />
-                      <a href="mailto:info@emsenergi.dk" className="hover:text-black transition-colors">info@emsenergi.dk</a>
+                    <h3 className="font-serif text-xl text-navy mb-2">Kontakt</h3>
+                    <p className="text-slate leading-relaxed">
+                      <a href="tel:+4531425364" className="hover:text-navy transition-colors">+45 31 42 53 64</a><br />
+                      <a href="mailto:info@emsenergi.dk" className="hover:text-navy transition-colors">info@emsenergi.dk</a>
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-xl text-black mb-2">&Aring;bningstider</h3>
-                    <p className="text-secondary leading-relaxed">
+                    <h3 className="font-serif text-xl text-navy mb-2">&Aring;bningstider</h3>
+                    <p className="text-slate leading-relaxed">
                       Man&ndash;Fre 06:30&ndash;21:00<br />
                       L&oslash;r&ndash;S&oslash;n 08:00&ndash;18:00
                     </p>
@@ -737,8 +737,8 @@ export default function Home() {
               {/* Right — Map placeholder */}
               <ScrollReveal delay={150}>
                 {/* TODO: Add Google Maps embed — Nordre Frihavnsgade 65, kl. tv, 2100 Østerbro */}
-                <div className="bg-warm-grey rounded-xl h-full min-h-[400px] flex items-center justify-center">
-                  <span className="text-secondary font-serif text-lg">Google Maps</span>
+                <div className="bg-baby-blue rounded-xl h-full min-h-[400px] flex items-center justify-center">
+                  <span className="text-slate font-serif text-lg">Google Maps</span>
                 </div>
               </ScrollReveal>
             </div>
@@ -751,13 +751,13 @@ export default function Home() {
         <section id="book" className="bg-white py-12 sm:py-16 md:py-24 lg:py-32 text-center">
           <div className="mx-auto max-w-7xl px-6">
             <ScrollReveal>
-              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl text-black">
+              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl text-navy">
                 Klar til at pr&oslash;ve?
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={150}>
-              <p className="mx-auto mt-6 max-w-lg text-lg text-secondary">
+              <p className="mx-auto mt-6 max-w-lg text-lg text-slate">
                 20 minutter. Ingen binding. Din f&oslash;rste session er gratis.
               </p>
             </ScrollReveal>
@@ -766,12 +766,12 @@ export default function Home() {
               <div className="mt-10">
                 <Link
                   href="#find-os"
-                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-signal-orange px-10 py-4 text-lg font-medium text-white transition-all hover:bg-orange-hover hover:shadow-lg hover:-translate-y-0.5"
+                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-cobalt px-10 py-4 text-lg font-medium text-white transition-all hover:bg-royal hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Book Gratis Pr&oslash;vetr&aelig;ning
                 </Link>
               </div>
-              <p className="mt-6 text-xs sm:text-sm text-secondary flex flex-wrap justify-center gap-x-4 gap-y-1">
+              <p className="mt-6 text-xs sm:text-sm text-slate flex flex-wrap justify-center gap-x-4 gap-y-1">
                 <span>&#10003; Gratis f&oslash;rste session</span>
                 <span>&#10003; Ingen binding</span>
                 <span>&#10003; Book online p&aring; 30 sekunder</span>

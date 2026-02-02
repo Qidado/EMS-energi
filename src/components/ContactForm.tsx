@@ -34,7 +34,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-xl bg-white border border-warm-grey-dark p-10 text-center">
+      <div className="rounded-xl bg-white border border-border-medium p-10 text-center">
         <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-amber/10">
           <svg
             width="32"
@@ -45,15 +45,15 @@ export default function ContactForm() {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-orange-text"
+            className="text-cobalt"
           >
             <path d="M20 6L9 17l-5-5" />
           </svg>
         </div>
-        <h3 className="font-serif text-2xl text-black">
+        <h3 className="font-serif text-2xl text-navy">
           Tak for din besked!
         </h3>
-        <p className="mt-2 text-secondary">
+        <p className="mt-2 text-slate">
           Vi vender tilbage til dig hurtigst muligt.
         </p>
       </div>
@@ -61,18 +61,18 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    "w-full rounded-xl border border-warm-grey-dark bg-white p-4 text-black placeholder:text-secondary/60 focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/10 outline-none transition";
+    "w-full rounded-xl border border-border-medium bg-white p-4 text-navy placeholder:text-slate/60 focus:border-cobalt focus:ring-1 focus:ring-cobalt/10 outline-none transition";
 
   return (
     <div>
-      <h2 className="font-serif text-2xl text-black mb-8">
+      <h2 className="font-serif text-2xl text-navy mb-8">
         Send os en besked
       </h2>
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
           <label
             htmlFor="name"
-            className="mb-2 block text-sm font-medium text-black"
+            className="mb-2 block text-sm font-medium text-navy"
           >
             Fulde Navn
           </label>
@@ -91,7 +91,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-sm font-medium text-black"
+            className="mb-2 block text-sm font-medium text-navy"
           >
             E-mail
           </label>
@@ -110,10 +110,10 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="phone"
-            className="mb-2 block text-sm font-medium text-black"
+            className="mb-2 block text-sm font-medium text-navy"
           >
             Telefon{" "}
-            <span className="font-normal text-secondary">(valgfrit)</span>
+            <span className="font-normal text-slate">(valgfrit)</span>
           </label>
           <input
             type="tel"
@@ -129,7 +129,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="subject"
-            className="mb-2 block text-sm font-medium text-black"
+            className="mb-2 block text-sm font-medium text-navy"
           >
             Emne
           </label>
@@ -154,7 +154,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="mb-2 block text-sm font-medium text-black"
+            className="mb-2 block text-sm font-medium text-navy"
           >
             Besked
           </label>
@@ -173,7 +173,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 w-full rounded-lg bg-signal-orange px-8 py-3 font-medium text-white transition hover:bg-orange-hover disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-2 w-full rounded-lg bg-cobalt px-8 py-3 font-medium text-white transition hover:bg-royal disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? "Sender..." : "Send Besked"}
         </button>

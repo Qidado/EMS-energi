@@ -2,32 +2,34 @@
 
 @theme inline {
   /* Primary colors */
-  --color-signal-orange: #FF5A00;
-  --color-orange-hover: #E54E00;
-  --color-forest-green: #1A3D2E;
-  --color-green-light: #2D5A3D;
+  --color-cobalt: #1E4AE9;
+  --color-royal: #2851CC;
+  --color-navy: #0F1C3F;
+  --color-navy-light: #1A3058;
 
   /* Neutral / background colors */
-  --color-off-white: #FAFAFA;
-  --color-warm-grey: #E8E6E3;
-  --color-warm-grey-dark: #D4D1CC;
+  --color-off-white: #F8F9FC;
+  --color-baby-blue: #D6E5F5;
+  --color-border-medium: #CBD5E1;
+  --color-powder: #E8F0F8;
+  --color-border-light: #E2E8F0;
 
   /* Text colors */
-  --color-black: #0A0A0A;
-  --color-secondary: #4A4A4A;
-  --color-muted: #6B6B6B;
+  --color-slate: #3D4F6F;
+  --color-muted: #6B7A94;
   --color-white: #FFFFFF;
-  --color-orange-text: #B34000;
+  --color-text-on-dark-muted: #A8B5CC;
 
   /* Status colors */
   --color-success: #10B981;
   --color-warning: #F59E0B;
+  --color-error: #EF4444;
 
   /* Legacy aliases */
-  --color-background: #FAFAFA;
-  --color-foreground: #0A0A0A;
-  --color-text-muted: #4A4A4A;
-  --color-divider: #D4D1CC;
+  --color-background: #F8F9FC;
+  --color-foreground: #0F1C3F;
+  --color-text-muted: #3D4F6F;
+  --color-divider: #CBD5E1;
 
   /* Fonts */
   --font-heading: var(--font-fraunces);
@@ -59,7 +61,7 @@
 
   body {
     background: var(--color-off-white);
-    color: var(--color-secondary);
+    color: var(--color-slate);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
@@ -70,7 +72,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), "Georgia", serif;
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-navy);
   }
 
   h1 { font-size: clamp(2.5rem, 5vw, 4.75rem); line-height: 1.1; }
@@ -81,20 +83,20 @@
   small, .text-small { font-size: 14px; }
 
   /* Heading utility classes */
-  .heading-orange {
+  .heading-cobalt {
     font-family: var(--font-heading), "Georgia", serif;
     font-style: italic;
-    color: var(--color-orange-text);
+    color: var(--color-cobalt);
   }
 
-  .heading-green {
+  .heading-navy {
     font-family: var(--font-heading), "Georgia", serif;
     font-style: italic;
-    color: var(--color-forest-green);
+    color: var(--color-navy);
   }
 
   a {
-    color: var(--color-orange-text);
+    color: var(--color-cobalt);
     transition: color 200ms ease-out;
   }
 
@@ -103,13 +105,13 @@
   }
 
   ::selection {
-    background-color: var(--color-warm-grey);
-    color: var(--color-black);
+    background-color: var(--color-baby-blue);
+    color: var(--color-navy);
   }
 
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-off-white), 0 0 0 4px var(--color-signal-orange);
+    box-shadow: 0 0 0 2px var(--color-off-white), 0 0 0 4px var(--color-cobalt);
   }
 }
 
@@ -122,7 +124,7 @@
   left: 16px;
   z-index: 9999;
   padding: 12px 24px;
-  background: var(--color-forest-green);
+  background: var(--color-navy);
   color: var(--color-white);
   font-weight: 600;
   border-radius: 0 0 8px 8px;
@@ -181,8 +183,8 @@
   ::-webkit-scrollbar { width: 10px; }
 }
 ::-webkit-scrollbar-track { background: var(--color-off-white); }
-::-webkit-scrollbar-thumb { background: var(--color-warm-grey-dark); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-signal-orange); }
+::-webkit-scrollbar-thumb { background: var(--color-border-medium); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-cobalt); }
 
 /* ============================================
    REDUCED MOTION

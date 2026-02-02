@@ -135,16 +135,16 @@ export default function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement Bar */}
       {announcementVisible && (
-        <div className="bg-warm-grey py-1.5 px-3 sm:py-2.5 sm:px-4 text-center relative">
+        <div className="bg-cobalt py-1.5 px-3 sm:py-2.5 sm:px-4 text-center relative">
           <Link
             href="#find-os"
-            className="text-black text-xs sm:text-sm hover:text-orange-text transition-colors duration-200"
+            className="text-white text-xs sm:text-sm hover:text-white/80 transition-colors duration-200"
           >
             Pr&oslash;v EMS &mdash; F&oslash;rste tr&aelig;ning gratis! &rarr;
           </Link>
           <button
             onClick={() => setAnnouncementVisible(false)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-black/40 hover:text-black transition-colors duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5"
             aria-label="Luk meddelelse"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -156,7 +156,7 @@ export default function Navigation() {
 
       {/* Main Navigation */}
       <nav
-        className={`bg-white border-b border-warm-grey-dark transition-all duration-300 ${
+        className={`bg-white border-b border-border-medium transition-all duration-300 ${
           scrolled ? "shadow-sm" : "shadow-none"
         }`}
       >
@@ -168,7 +168,7 @@ export default function Navigation() {
           >
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <span className="font-heading text-xl font-bold tracking-tight text-black">
+              <span className="font-heading text-xl font-bold tracking-tight text-navy">
                 EMS ENERGI
               </span>
             </Link>
@@ -180,19 +180,19 @@ export default function Navigation() {
                   <div key={link.label} className="relative group">
                     <Link
                       href={link.href}
-                      className="flex items-center gap-1 text-base text-secondary hover:text-black transition-colors duration-200"
+                      className="flex items-center gap-1 text-base text-slate hover:text-navy transition-colors duration-200"
                     >
                       {link.label}
                       <ChevronDown className="transition-transform duration-200 group-hover:rotate-180" />
                     </Link>
                     {/* Dropdown Panel */}
                     <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <div className="bg-white rounded-lg shadow-lg border border-warm-grey-dark py-2 min-w-[200px]">
+                      <div className="bg-white rounded-lg shadow-lg border border-border-medium py-2 min-w-[200px]">
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-secondary hover:text-black hover:bg-off-white transition-colors duration-200"
+                            className="block px-4 py-2.5 text-sm text-slate hover:text-navy hover:bg-off-white transition-colors duration-200"
                           >
                             {child.label}
                           </Link>
@@ -204,7 +204,7 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-base text-secondary hover:text-black transition-colors duration-200"
+                    className="text-base text-slate hover:text-navy transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -216,7 +216,7 @@ export default function Navigation() {
             <div className="hidden md:flex items-center">
               <Link
                 href="#find-os"
-                className="bg-signal-orange text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:bg-orange-hover transition-colors duration-200"
+                className="bg-cobalt text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:bg-royal transition-colors duration-200"
               >
                 Book Tr&aelig;ning
               </Link>
@@ -226,7 +226,7 @@ export default function Navigation() {
             <button
               ref={hamburgerRef}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-black hover:text-secondary transition-colors duration-200"
+              className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-navy hover:text-slate transition-colors duration-200"
               aria-label={mobileMenuOpen ? "Luk menu" : "Åbn menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -251,7 +251,7 @@ export default function Navigation() {
         {/* Mobile Menu */}
         <div
           ref={mobileMenuRef}
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-warm-grey-dark ${
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-border-medium ${
             mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
@@ -262,7 +262,7 @@ export default function Navigation() {
                   <button
                     type="button"
                     onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                    className="flex w-full items-center justify-between text-base text-secondary hover:text-black transition-colors duration-200 py-3"
+                    className="flex w-full items-center justify-between text-base text-slate hover:text-navy transition-colors duration-200 py-3"
                   >
                     {link.label}
                     <ChevronDown
@@ -285,7 +285,7 @@ export default function Navigation() {
                             setMobileMenuOpen(false);
                             setMobileDropdownOpen(false);
                           }}
-                          className="block text-sm text-secondary hover:text-black transition-colors duration-200 py-2.5"
+                          className="block text-sm text-slate hover:text-navy transition-colors duration-200 py-2.5"
                         >
                           {child.label}
                         </Link>
@@ -298,7 +298,7 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-base text-secondary hover:text-black transition-colors duration-200 py-3"
+                  className="block text-base text-slate hover:text-navy transition-colors duration-200 py-3"
                 >
                   {link.label}
                 </Link>
@@ -309,7 +309,7 @@ export default function Navigation() {
               <Link
                 href="#find-os"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block bg-signal-orange text-white text-sm font-medium px-5 py-3 rounded-lg text-center hover:bg-orange-hover transition-colors duration-200"
+                className="block bg-cobalt text-white text-sm font-medium px-5 py-3 rounded-lg text-center hover:bg-royal transition-colors duration-200"
               >
                 Book Tr&aelig;ning
               </Link>

@@ -9,15 +9,15 @@ interface ImageCardProps {
   subtitle?: string;
   href?: string;
   imageSrc?: string;
-  /** Title color — defaults to green-light */
+  /** Title color — defaults to navy-light */
   titleColor?: "green" | "orange" | "forest" | "white";
   className?: string;
 }
 
 const titleColorMap: Record<string, string> = {
-  green: "text-green-light",
-  orange: "text-orange-text",
-  forest: "text-forest-green",
+  green: "text-navy-light",
+  orange: "text-cobalt",
+  forest: "text-navy",
   white: "text-white",
 };
 
@@ -35,7 +35,7 @@ export default function ImageCard({
 }: ImageCardProps) {
   const card = (
     <div
-      className={`group relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-xl bg-warm-grey ${className}`}
+      className={`group relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-xl bg-baby-blue ${className}`}
     >
       {/* Background image */}
       {imageSrc && (
@@ -49,7 +49,7 @@ export default function ImageCard({
 
       {/* Overlay */}
       {imageSrc && (
-        <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:bg-black/30" />
+        <div className="absolute inset-0 bg-navy/20 transition-opacity duration-300 group-hover:bg-navy/30" />
       )}
 
       {/* Title */}
@@ -77,7 +77,7 @@ export default function ImageCard({
           {href && (
             <Link
               href={href}
-              className="ml-2 font-medium text-orange-text transition-colors hover:underline"
+              className="ml-2 font-medium text-cobalt transition-colors hover:underline"
             >
               Læs mere &rarr;
             </Link>

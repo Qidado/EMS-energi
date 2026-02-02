@@ -18,16 +18,16 @@ export default function HandelsbetingelserPage() {
 
       <main id="main-content" className="bg-cream pt-28 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20">
         <div className="mx-auto max-w-3xl px-6">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-black">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-navy">
             Handelsbetingelser
           </h1>
           <p className="mt-4 text-sm text-secondary">
             Sidst opdateret: 1. januar 2026
           </p>
 
-          <div className="mt-10 space-y-8 text-gray-dark leading-relaxed">
+          <div className="mt-10 space-y-8 text-slate leading-relaxed">
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">1. Generelt</h2>
+              <h2 className="font-serif text-xl text-navy mb-3">1. Generelt</h2>
               <p>
                 Disse handelsbetingelser g&aelig;lder for alle medlemskaber og
                 ydelser hos EMS energi ApS, Nordre Frihavnsgade 65, kl. tv, 2100
@@ -36,7 +36,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 2. Medlemskab og tilmelding
               </h2>
               <p>
@@ -48,7 +48,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 3. Priser og betaling
               </h2>
               <p>
@@ -63,7 +63,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 4. Opsigelse
               </h2>
               <p>
@@ -75,7 +75,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 5. Booking og udeblivelser
               </h2>
               <p>
@@ -87,7 +87,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 6. Helbredserkl&aelig;ring
               </h2>
               <p>
@@ -100,7 +100,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 7. Ansvar og forsikring
               </h2>
               <p>
@@ -112,7 +112,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 8. Fortrydelsesret
               </h2>
               <p>
@@ -123,7 +123,7 @@ export default function HandelsbetingelserPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-xl text-black mb-3">
+              <h2 className="font-serif text-xl text-navy mb-3">
                 9. Klageadgang
               </h2>
               <p>

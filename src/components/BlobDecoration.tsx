@@ -5,7 +5,7 @@
 
 interface BlobDecorationProps {
   size?: "sm" | "md" | "lg" | "xl";
-  color?: "orange" | "green";
+  color?: "blue" | "navy";
   opacity?: number;
   className?: string;
 }
@@ -18,8 +18,8 @@ const sizeMap: Record<string, string> = {
 };
 
 const colorMap: Record<string, string> = {
-  "orange": "#FF5A00",
-  "green": "#2D5A3D",
+  "blue": "#1E4AE9",
+  "navy": "#0F1C3F",
 };
 
 /* Pre-defined organic blob paths */
@@ -30,7 +30,7 @@ const blobs = [
 
 export default function BlobDecoration({
   size = "md",
-  color = "orange",
+  color = "blue",
   opacity = 0.3,
   className = "",
 }: BlobDecorationProps) {

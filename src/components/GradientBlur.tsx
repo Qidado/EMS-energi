@@ -5,7 +5,7 @@
 
 interface GradientBlurProps {
   position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | "center";
-  color?: "gray" | "orange";
+  color?: "gray" | "blue";
   size?: "sm" | "md" | "lg";
   className?: string;
 }
@@ -25,8 +25,8 @@ const sizeMap: Record<string, string> = {
 };
 
 const colorMap: Record<string, string> = {
-  gray: "#E8E6E3",
-  orange: "#FF5A00",
+  gray: "#D6E5F5",
+  blue: "#1E4AE9",
 };
 
 export default function GradientBlur({
