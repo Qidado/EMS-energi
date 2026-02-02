@@ -543,16 +543,16 @@ export default function Virksomheder() {
         {/* ──────────────────────────────────────────────
             6. CTA
         ────────────────────────────────────────────── */}
-        <section className="bg-black py-12 sm:py-16 md:py-24 lg:py-32 text-center text-white">
+        <section className="bg-white py-12 sm:py-16 md:py-24 lg:py-32 text-center">
           <div className="mx-auto max-w-7xl px-6">
             <ScrollReveal>
-              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl">
+              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl text-black">
                 Investér i dine medarbejderes sundhed
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={150}>
-              <p className="mx-auto mt-6 max-w-lg text-lg text-white/60">
+              <p className="mx-auto mt-6 max-w-lg text-lg text-secondary">
                 Start med en uforpligtende samtale om hvordan EMS kan
                 gavne jeres virksomhed.
               </p>

@@ -191,12 +191,12 @@ export default function OmOsPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-black text-white py-12 sm:py-16 md:py-24 text-center">
+        <section className="bg-white py-12 sm:py-16 md:py-24 text-center">
           <ScrollReveal className="mx-auto max-w-3xl px-6">
-            <h2 className="font-serif text-3xl sm:text-4xl">
+            <h2 className="font-serif text-3xl sm:text-4xl text-black">
               Bliv en del af EMS Energi
             </h2>
-            <p className="mt-4 text-lg text-white/70">
+            <p className="mt-4 text-lg text-secondary">
               Tag det f&oslash;rste skridt mod en st&aelig;rkere og sundere dig.
               Book din gratis pr&oslash;vetr&aelig;ning i dag.
             </p>

@@ -747,16 +747,16 @@ export default function Home() {
         {/* ──────────────────────────────────────────────
             11. CTA Section
         ────────────────────────────────────────────── */}
-        <section id="book" className="bg-black py-12 sm:py-16 md:py-24 lg:py-32 text-center text-white">
+        <section id="book" className="bg-white py-12 sm:py-16 md:py-24 lg:py-32 text-center">
           <div className="mx-auto max-w-7xl px-6">
             <ScrollReveal>
-              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl">
+              <h2 className="font-serif text-3xl sm:text-4xl leading-tight md:text-5xl text-black">
                 Klar til at pr&oslash;ve?
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={150}>
-              <p className="mx-auto mt-6 max-w-lg text-lg text-white/60">
+              <p className="mx-auto mt-6 max-w-lg text-lg text-secondary">
                 20 minutter. Ingen binding. Din f&oslash;rste session er gratis.
               </p>
             </ScrollReveal>
@@ -770,7 +770,7 @@ export default function Home() {
                   Book Gratis Pr&oslash;vetr&aelig;ning
                 </Link>
               </div>
-              <p className="mt-6 text-xs sm:text-sm text-white/50 flex flex-wrap justify-center gap-x-4 gap-y-1">
+              <p className="mt-6 text-xs sm:text-sm text-secondary flex flex-wrap justify-center gap-x-4 gap-y-1">
                 <span>&#10003; Gratis f&oslash;rste session</span>
                 <span>&#10003; Ingen binding</span>
                 <span>&#10003; Book online p&aring; 30 sekunder</span>
