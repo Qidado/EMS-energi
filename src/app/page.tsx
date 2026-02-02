@@ -143,7 +143,7 @@ const steps = [
 const trainers = [
   {
     name: "[Instruktør Navn]",
-    role: "Head Instructor",
+    role: "Chefinstruktør",
     bio: "Certificeret EMS-instruktør med X års erfaring. Fokus på at finde den rette intensitet til hver enkelt.",
   },
   {

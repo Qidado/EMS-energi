@@ -78,17 +78,14 @@ function ChevronIcon({ open }: { open: boolean }) {
 }
 
 const footerTraening = [
-  { href: "/", label: "EMS Træning" },
-  { href: "/", label: "Holdoversigt" },
-  { href: "/", label: "Personlig Træning" },
   { href: "/virksomheder", label: "For Virksomheder" },
 ];
 
 const footerInfo = [
   { href: "/om-os", label: "Om Os" },
-  { href: "/priser", label: "Priser" },
+  { href: "/#priser", label: "Priser" },
   { href: "#faq", label: "FAQ" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/#find-os", label: "Kontakt" },
 ];
 
 const footerLegal = [
@@ -284,7 +281,7 @@ export default function Footer() {
         <div className="border-t border-white/20">
           <div className="max-w-7xl mx-auto px-6 pt-8 pb-8 mt-0 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/70 text-xs">
-              &copy; 2025 EMS Energi. Alle rettigheder forbeholdes.
+              &copy; 2026 EMS Energi. Alle rettigheder forbeholdes.
             </p>
             <div className="flex items-center gap-6">
               {footerLegal.map((link) => (

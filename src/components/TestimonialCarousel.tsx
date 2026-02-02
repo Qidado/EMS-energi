@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
   quote: string;
@@ -119,6 +120,16 @@ export default function TestimonialCarousel() {
 
   const current = testimonials[active];
 
+  function goPrev() {
+    lastInteraction.current = Date.now();
+    goTo((active - 1 + testimonials.length) % testimonials.length);
+  }
+
+  function goNext() {
+    lastInteraction.current = Date.now();
+    goTo((active + 1) % testimonials.length);
+  }
+
   // TODO: Add member photos with permission
   return (
     <div
@@ -126,7 +137,7 @@ export default function TestimonialCarousel() {
       aria-roledescription="karrusel"
       aria-label="Kundeanmeldelser"
       tabIndex={0}
-      className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -136,43 +147,64 @@ export default function TestimonialCarousel() {
       onFocus={() => setIsPaused(true)}
       onBlur={() => setIsPaused(false)}
     >
-      {/* Decorative Opening Quote Mark */}
-      <div
-        className="font-serif text-4xl sm:text-6xl md:text-8xl text-signal-orange/30 leading-none select-none mb-4"
-        aria-hidden="true"
-      >
-        &ldquo;
-      </div>
+      {/* Quote area with arrow navigation */}
+      <div className="relative">
+        {/* Left Arrow */}
+        <button
+          onClick={goPrev}
+          aria-label="Forrige udtalelse"
+          className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-warm-stone/20 hover:bg-signal-orange hover:text-white hover:border-signal-orange transition-all duration-200"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
 
-      {/* Quote Content */}
-      <div
-        aria-live="polite"
-        aria-atomic="true"
-        style={{
-          opacity: fade ? 1 : 0,
-          transition: "opacity 0.3s ease-in-out",
-        }}
-      >
-        <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl italic text-black leading-relaxed">
-          &ldquo;{current.quote}&rdquo;
-        </blockquote>
+        {/* Right Arrow */}
+        <button
+          onClick={goNext}
+          aria-label="Næste udtalelse"
+          className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-warm-stone/20 hover:bg-signal-orange hover:text-white hover:border-signal-orange transition-all duration-200"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
 
-        {/* Member avatar placeholder */}
-        <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-warm-grey">
-          <span className="font-serif text-sm font-medium text-secondary">
-            {current.name.split(" ").slice(0, 2).map((n) => n[0]).join("")}
-          </span>
+        {/* Decorative Opening Quote Mark */}
+        <div
+          className="font-serif text-4xl sm:text-6xl md:text-8xl text-signal-orange/30 leading-none select-none mb-4"
+          aria-hidden="true"
+        >
+          &ldquo;
         </div>
 
-        <p className="text-black mt-4 font-medium">
-          {current.name}
-        </p>
-        <p className="text-sm text-orange-text mt-1">
-          {current.role}
-        </p>
-        <p className="text-xs text-secondary mt-1">
-          {current.memberSince}
-        </p>
+        {/* Quote Content */}
+        <div
+          aria-live="polite"
+          aria-atomic="true"
+          style={{
+            opacity: fade ? 1 : 0,
+            transition: "opacity 0.3s ease-in-out",
+          }}
+        >
+          <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl italic text-black leading-relaxed">
+            &ldquo;{current.quote}&rdquo;
+          </blockquote>
+
+          {/* Member avatar placeholder */}
+          <div className="mx-auto mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-warm-grey">
+            <span className="font-serif text-sm font-medium text-secondary">
+              {current.name.split(" ").slice(0, 2).map((n) => n[0]).join("")}
+            </span>
+          </div>
+
+          <p className="text-black mt-4 font-medium">
+            {current.name}
+          </p>
+          <p className="text-sm text-orange-text mt-1">
+            {current.role}
+          </p>
+          <p className="text-xs text-secondary mt-1">
+            {current.memberSince}
+          </p>
+        </div>
       </div>
 
       {/* Dot Navigation */}
@@ -188,7 +220,7 @@ export default function TestimonialCarousel() {
               className={`rounded-full transition-all duration-300 ${
                 index === active
                   ? "bg-signal-orange w-2.5 h-2.5"
-                  : "bg-signal-orange/20 w-2.5 h-2.5 hover:bg-signal-orange/40"
+                  : "bg-warm-stone/40 w-2.5 h-2.5 hover:bg-warm-stone/60"
               }`}
             />
           </button>

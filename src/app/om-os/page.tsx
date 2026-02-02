@@ -113,7 +113,7 @@ export default function OmOsPage() {
                   resultater. Og du er færdig før din frokostpause slutter.
                 </p>
                 <Link
-                  href="/ems-traening"
+                  href="/#hvad-er-ems"
                   className="mt-6 inline-flex items-center text-coral font-medium hover:text-coral-dark transition-colors"
                 >
                   L&aelig;s mere om EMS &rarr;
