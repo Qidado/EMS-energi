@@ -23,6 +23,8 @@ interface NavItem {
    ============================================ */
 
 const navLinks: NavItem[] = [
+  { href: "/#hvad-er-ems", label: "Hvad er EMS?" },
+  { href: "/#hvem-er-det-for", label: "Er det for mig?" },
   { href: "/#priser", label: "Priser" },
   { href: "/virksomheder", label: "For Virksomheder" },
   { href: "/#find-os", label: "Kontakt" },
