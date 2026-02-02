@@ -87,7 +87,7 @@ export default function TestimonialCard({
         <p className="text-black mt-4 font-medium">
           {current.name}
         </p>
-        <p className="text-sm text-signal-orange mt-1">
+        <p className="text-sm text-orange-text mt-1">
           {current.role}
         </p>
         <p className="text-xs text-secondary mt-1">

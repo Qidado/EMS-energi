@@ -75,7 +75,7 @@ export default function PricingCard({
       <ul className="flex-1 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-start gap-3">
-            <span className="mt-0.5 text-signal-orange" aria-hidden="true">
+            <span className="mt-0.5 text-orange-text" aria-hidden="true">
               &#10003;
             </span>
             <span className="text-black">{feature}</span>
@@ -90,7 +90,7 @@ export default function PricingCard({
           className={`block w-full rounded-lg py-3.5 text-center font-medium tracking-wider transition ${
             featured
               ? "bg-signal-orange text-white hover:bg-orange-hover"
-              : "border-2 border-signal-orange text-signal-orange hover:bg-signal-orange hover:text-white"
+              : "border-2 border-signal-orange text-orange-text hover:bg-signal-orange hover:text-white"
           }`}
         >
           {cta}

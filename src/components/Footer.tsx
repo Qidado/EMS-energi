@@ -78,15 +78,17 @@ function ChevronIcon({ open }: { open: boolean }) {
 }
 
 const footerTraening = [
-  { href: "#hvad-er-ems", label: "EMS Træning" },
-  { href: "#din-foerste-session", label: "Holdoversigt" },
+  { href: "/", label: "EMS Træning" },
+  { href: "/", label: "Holdoversigt" },
+  { href: "/", label: "Personlig Træning" },
+  { href: "/virksomheder", label: "For Virksomheder" },
 ];
 
 const footerInfo = [
-  { href: "#hvad-er-ems", label: "Om Os" },
-  { href: "#priser", label: "Priser" },
-  { href: "#find-os", label: "Kontakt" },
+  { href: "/om-os", label: "Om Os" },
+  { href: "/priser", label: "Priser" },
   { href: "#faq", label: "FAQ" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 const footerLegal = [
@@ -138,8 +140,8 @@ export default function Footer() {
 
   return (
     <>
-      <WaveDivider color="#1A3D2E" />
-      <footer className="bg-forest-green border-t border-forest-green">
+      <WaveDivider color="#0A0A0A" />
+      <footer className="bg-black border-t border-black">
         <div className="max-w-7xl mx-auto py-16 px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-8">
             {/* Col 1: Brand */}
@@ -150,12 +152,12 @@ export default function Footer() {
               <p className="text-white/70 text-sm mb-6 leading-relaxed">
                 Din krop. Din energi.
               </p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
                 <a
                   href="https://instagram.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-signal-orange transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-signal-orange transition-colors duration-200"
                   aria-label="Instagram"
                 >
                   <InstagramIcon />
@@ -164,7 +166,7 @@ export default function Footer() {
                   href="https://facebook.com/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-signal-orange transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-signal-orange transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <FacebookIcon />
@@ -173,7 +175,7 @@ export default function Footer() {
                   href="https://linkedin.com/company/emsenergi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-signal-orange transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-signal-orange transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <LinkedInIcon />
@@ -235,10 +237,10 @@ export default function Footer() {
                 </p>
                 <p>
                   <a
-                    href="tel:+45XXXXXXXX"
+                    href="tel:+4531425364"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    Tlf: +45 XX XX XX XX
+                    📞 +45 31 42 53 64
                   </a>
                 </p>
                 <p>
@@ -246,7 +248,7 @@ export default function Footer() {
                     href="mailto:info@emsenergi.dk"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    info@emsenergi.dk
+                    ✉️ info@emsenergi.dk
                   </a>
                 </p>
                 <div className="pt-2">
@@ -267,7 +269,7 @@ export default function Footer() {
             >
               <div className="space-y-3 text-white/70 text-sm leading-relaxed">
                 <p>EMS Energi ApS</p>
-                <p>CVR: 12345678</p>
+                <p>CVR: [INSERT REAL CVR]</p>
                 <p>
                   Vesterbrogade 42,
                   <br />

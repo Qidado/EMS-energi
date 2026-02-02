@@ -19,7 +19,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
   };
 
   return (
-    <div className="mx-auto max-w-3xl">
+    <div>
       {items.map((item, index) => {
         const isOpen = openIndex === index;
 
@@ -39,7 +39,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                className={`h-6 w-6 shrink-0 text-signal-orange transition-transform duration-300 ${
+                className={`h-6 w-6 shrink-0 text-orange-text transition-transform duration-300 ${
                   isOpen ? "rotate-45" : "rotate-0"
                 }`}
               >

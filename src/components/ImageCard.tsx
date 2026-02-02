@@ -16,7 +16,7 @@ interface ImageCardProps {
 
 const titleColorMap: Record<string, string> = {
   green: "text-green-light",
-  orange: "text-signal-orange",
+  orange: "text-orange-text",
   forest: "text-forest-green",
   white: "text-white",
 };
@@ -77,7 +77,7 @@ export default function ImageCard({
           {href && (
             <Link
               href={href}
-              className="ml-2 font-medium text-signal-orange transition-colors hover:underline"
+              className="ml-2 font-medium text-orange-text transition-colors hover:underline"
             >
               Læs mere &rarr;
             </Link>

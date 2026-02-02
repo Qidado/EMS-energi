@@ -15,9 +15,26 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://emsenergi.dk"),
   title: "EMS Energi | EMS Træning i København",
   description:
     "Oplev kraften af EMS træning hos EMS Energi. 20 minutters effektiv træning der svarer til flere timers konventionel træning. Book din gratis prøvetræning i dag.",
+  keywords: [
+    "EMS træning",
+    "EMS København",
+    "elektrisk muskelstimulation",
+    "EMS fitness",
+    "EMS studio København",
+    "effektiv træning",
+  ],
+  openGraph: {
+    siteName: "EMS Energi",
+    locale: "da_DK",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +45,62 @@ export default function RootLayout({
   return (
     <html lang="da">
       <body className={`${fraunces.variable} ${jakarta.variable} antialiased`}>
+        <a href="#main-content" className="skip-link">
+          Spring til hovedindhold
+        </a>
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HealthClub",
+              name: "EMS Energi",
+              description:
+                "EMS træningsstudie på Vesterbro, København. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation.",
+              url: "https://emsenergi.dk",
+              telephone: "+4531425364",
+              email: "info@emsenergi.dk",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Vesterbrogade 42",
+                addressLocality: "København V",
+                postalCode: "1620",
+                addressCountry: "DK",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 55.6711,
+                longitude: 12.5558,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "06:30",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Saturday", "Sunday"],
+                  opens: "08:00",
+                  closes: "18:00",
+                },
+              ],
+              priceRange: "$$",
+              sameAs: [
+                "https://www.instagram.com/emsenergi",
+                "https://www.facebook.com/emsenergi",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

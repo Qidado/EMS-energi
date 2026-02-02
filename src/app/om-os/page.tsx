@@ -7,7 +7,22 @@ import ScrollReveal from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Om Os | EMS Energi",
   description:
-    "Laer mere om EMS Energi — dit EMS fitnessstudie i Danmark. Moed vores team, forstaa EMS teknologien, og opdag vores vaerdier.",
+    "Lær mere om EMS Energi — dit EMS fitnessstudie i København. Mød vores team, forstå EMS teknologien, og opdag vores værdier.",
+  openGraph: {
+    url: "/om-os",
+    title: "Om Os | EMS Energi",
+    description:
+      "Lær mere om EMS Energi — dit EMS fitnessstudie i København. Mød vores team og forstå EMS teknologien.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Om Os | EMS Energi",
+    description:
+      "Lær mere om EMS Energi — dit EMS fitnessstudie i København. Mød vores team og forstå EMS teknologien.",
+  },
+  alternates: {
+    canonical: "/om-os",
+  },
 };
 
 const values = [
@@ -51,7 +66,7 @@ export default function OmOsPage() {
     <>
       <Navigation />
 
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-cream pt-28 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20 text-center">
           <ScrollReveal className="mx-auto max-w-3xl px-6">

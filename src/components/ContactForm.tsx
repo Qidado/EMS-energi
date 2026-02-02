@@ -45,7 +45,7 @@ export default function ContactForm() {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-signal-orange"
+            className="text-orange-text"
           >
             <path d="M20 6L9 17l-5-5" />
           </svg>

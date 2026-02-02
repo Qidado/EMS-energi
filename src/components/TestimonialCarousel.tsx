@@ -12,37 +12,45 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Jeg træner 20 minutter om ugen og har aldrig været stærkere. Min ryg er helt smertefri nu.",
+      "Jeg har prøvet alt fra CrossFit til løb. EMS er det eneste der passer ind i min hverdag — og jeg kan mærke forskel.",
     name: "Mette K., 42",
     role: "Marketing Director",
-    memberSince: "Medlem siden 2023",
-  },
-  {
-    quote:
-      "Som tidligere atlet havde jeg brug for noget der udfordrede mig. EMS træning leverer på alle niveauer.",
-    name: "Thomas R., 38",
-    role: "Tidligere professionel håndboldspiller",
-    memberSince: "Medlem siden 2022",
-  },
-  {
-    quote:
-      "Jeg hadede fitnesscentre. Her er jeg færdig på 20 minutter og føler mig faktisk i form.",
-    name: "Jonas M., 31",
-    role: "Iværksætter",
     memberSince: "Medlem siden 2024",
   },
   {
     quote:
-      "Efter min knæoperation var EMS perfekt til genoptræning. Ingen belastning, men jeg mærker virkelig mine muskler arbejde.",
-    name: "Lise H., 56",
+      "Min fysioterapeut anbefalede EMS efter min rygoperation. Jeg er stærkere nu end før skaden.",
+    name: "Henrik L., 58",
     role: "Arkitekt",
-    memberSince: "Medlem siden 2023",
+    memberSince: "Medlem siden 2024",
+  },
+  {
+    quote:
+      "20 minutter i frokostpausen. Ingen omklædning, ingen kø til maskiner. Det er genialt.",
+    name: "Jonas M., 34",
+    role: "Softwareudvikler",
+    memberSince: "Medlem siden 2025",
+  },
+  {
+    quote:
+      "Som tidligere håndboldspiller savnede jeg intensiteten. EMS giver den samme følelse af at have trænet hårdt — på en brøkdel af tiden.",
+    name: "Thomas R., 38",
+    role: "",
+    memberSince: "Medlem siden 2024",
+  },
+  {
+    quote:
+      "I was nervous about the language barrier, but the trainers explain everything clearly in English. Best workout I've found in Copenhagen.",
+    name: "Sarah M., 41",
+    role: "Expat",
+    memberSince: "Medlem siden 2025",
   },
 ];
 
 export default function TestimonialCarousel() {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   const goTo = useCallback(
     (index: number) => {
@@ -87,26 +95,46 @@ export default function TestimonialCarousel() {
     touchEndX.current = null;
   }
 
-  // Auto-advance every 5 seconds, reset on swipe
+  // Keyboard navigation
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "ArrowLeft") {
+      lastInteraction.current = Date.now();
+      goTo((active - 1 + testimonials.length) % testimonials.length);
+    } else if (e.key === "ArrowRight") {
+      lastInteraction.current = Date.now();
+      goTo((active + 1) % testimonials.length);
+    }
+  }
+
+  // Auto-advance every 5 seconds, reset on swipe, pause on hover/focus
   useEffect(() => {
     const timer = setInterval(() => {
-      if (Date.now() - lastInteraction.current > 5000) {
+      if (!isPaused && Date.now() - lastInteraction.current > 5000) {
         const next = (active + 1) % testimonials.length;
         goTo(next);
       }
     }, 5000);
     return () => clearInterval(timer);
-  }, [active, goTo]);
+  }, [active, goTo, isPaused]);
 
   const current = testimonials[active];
 
   // TODO: Add member photos with permission
   return (
     <div
+      role="region"
+      aria-roledescription="karrusel"
+      aria-label="Kundeanmeldelser"
+      tabIndex={0}
       className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onKeyDown={handleKeyDown}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
     >
       {/* Decorative Opening Quote Mark */}
       <div
@@ -118,6 +146,8 @@ export default function TestimonialCarousel() {
 
       {/* Quote Content */}
       <div
+        aria-live="polite"
+        aria-atomic="true"
         style={{
           opacity: fade ? 1 : 0,
           transition: "opacity 0.3s ease-in-out",
@@ -137,7 +167,7 @@ export default function TestimonialCarousel() {
         <p className="text-black mt-4 font-medium">
           {current.name}
         </p>
-        <p className="text-sm text-signal-orange mt-1">
+        <p className="text-sm text-orange-text mt-1">
           {current.role}
         </p>
         <p className="text-xs text-secondary mt-1">
@@ -146,18 +176,22 @@ export default function TestimonialCarousel() {
       </div>
 
       {/* Dot Navigation */}
-      <div className="flex items-center justify-center gap-3 mt-10">
+      <div className="flex items-center justify-center gap-1 mt-10">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => goTo(index)}
             aria-label={`Gå til udtalelse ${index + 1}`}
-            className={`rounded-full transition-all duration-300 ${
-              index === active
-                ? "bg-signal-orange w-2.5 h-2.5"
-                : "bg-signal-orange/20 w-2.5 h-2.5 hover:bg-signal-orange/40"
-            }`}
-          />
+            className="flex items-center justify-center min-w-[44px] min-h-[44px]"
+          >
+            <span
+              className={`rounded-full transition-all duration-300 ${
+                index === active
+                  ? "bg-signal-orange w-2.5 h-2.5"
+                  : "bg-signal-orange/20 w-2.5 h-2.5 hover:bg-signal-orange/40"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

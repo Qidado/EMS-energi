@@ -39,7 +39,7 @@ const variantStyles: Record<Variant, string> = {
   secondary:
     "bg-forest-green text-white hover:bg-green-light hover:shadow-lg hover:-translate-y-0.5",
   outline:
-    "bg-transparent border-2 border-signal-orange text-signal-orange hover:bg-signal-orange hover:text-white hover:-translate-y-0.5",
+    "bg-transparent border-2 border-signal-orange text-orange-text hover:bg-signal-orange hover:text-white hover:-translate-y-0.5",
 };
 
 const sizeStyles: Record<Size, string> = {

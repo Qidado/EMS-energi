@@ -1,15 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 
 /* ============================================
    Types
    ============================================ */
 
+interface NavChild {
+  href: string;
+  label: string;
+}
+
 interface NavItem {
   href: string;
   label: string;
+  children?: NavChild[];
 }
 
 /* ============================================
@@ -17,41 +23,38 @@ interface NavItem {
    ============================================ */
 
 const navLinks: NavItem[] = [
-  { href: "#hvad-er-ems", label: "Om EMS" },
-  { href: "#din-foerste-session", label: "Sådan virker det" },
-  { href: "#priser", label: "Priser" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#find-os", label: "Kontakt" },
+  {
+    href: "/om-os",
+    label: "Om Os",
+    children: [
+      { href: "/om-os", label: "Vores historie" },
+      { href: "/om-os#team", label: "Mød teamet" },
+      { href: "#hvad-er-ems", label: "Hvad er EMS?" },
+    ],
+  },
+  { href: "/priser", label: "Priser" },
+  { href: "/virksomheder", label: "For Virksomheder" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 /* ============================================
-   Social Icons
+   Chevron Icon
    ============================================ */
 
-function InstagramIcon() {
+function ChevronDown({ className }: { className?: string }) {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" />
-      <circle cx="12" cy="12" r="5" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-    </svg>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <polyline points="6 9 12 15 18 9" />
     </svg>
   );
 }
@@ -64,6 +67,9 @@ export default function Navigation() {
   const [announcementVisible, setAnnouncementVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -76,6 +82,55 @@ export default function Navigation() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileMenuOpen]);
 
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const menu = mobileMenuRef.current;
+    if (!menu) return;
+
+    // Small delay to let the menu animate open
+    const focusTimeout = setTimeout(() => {
+      const focusable = menu.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length > 0) focusable[0].focus();
+    }, 100);
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setMobileMenuOpen(false);
+        setMobileDropdownOpen(false);
+        hamburgerRef.current?.focus();
+        return;
+      }
+
+      if (e.key !== "Tab" || !menu) return;
+
+      const focusable = menu.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      clearTimeout(focusTimeout);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement Bar */}
@@ -83,13 +138,13 @@ export default function Navigation() {
         <div className="bg-warm-grey py-1.5 px-3 sm:py-2.5 sm:px-4 text-center relative">
           <Link
             href="#find-os"
-            className="text-black text-xs sm:text-sm hover:text-signal-orange transition-colors duration-200"
+            className="text-black text-xs sm:text-sm hover:text-orange-text transition-colors duration-200"
           >
             Pr&oslash;v EMS &mdash; F&oslash;rste tr&aelig;ning gratis! &rarr;
           </Link>
           <button
             onClick={() => setAnnouncementVisible(false)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-black/40 hover:text-black transition-colors duration-200 p-1"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-black/40 hover:text-black transition-colors duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5"
             aria-label="Luk meddelelse"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -101,12 +156,16 @@ export default function Navigation() {
 
       {/* Main Navigation */}
       <nav
-        className={`bg-white border-b border-warm-grey-dark transition-shadow duration-300 ${
+        className={`bg-white border-b border-warm-grey-dark transition-all duration-300 ${
           scrolled ? "shadow-sm" : "shadow-none"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div
+            className={`flex items-center justify-between transition-all duration-300 ${
+              scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
+            }`}
+          >
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <span className="font-heading text-xl font-bold tracking-tight text-black">
@@ -116,31 +175,45 @@ export default function Navigation() {
 
             {/* Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-base text-secondary hover:text-black transition-colors duration-200"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.children ? (
+                  <div key={link.label} className="relative group">
+                    <Link
+                      href={link.href}
+                      className="flex items-center gap-1 text-base text-secondary hover:text-black transition-colors duration-200"
+                    >
+                      {link.label}
+                      <ChevronDown className="transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
+                    {/* Dropdown Panel */}
+                    <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="bg-white rounded-lg shadow-lg border border-warm-grey-dark py-2 min-w-[200px]">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2.5 text-sm text-secondary hover:text-black hover:bg-off-white transition-colors duration-200"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-base text-secondary hover:text-black transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
 
-            {/* Desktop Right — Social + CTA */}
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-2 text-secondary">
-                <a href="https://instagram.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 hover:text-signal-orange transition-colors">
-                  <InstagramIcon />
-                </a>
-                <a href="https://facebook.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-1.5 hover:text-signal-orange transition-colors">
-                  <FacebookIcon />
-                </a>
-                <a href="https://linkedin.com/company/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 hover:text-signal-orange transition-colors">
-                  <LinkedInIcon />
-                </a>
-              </div>
-
+            {/* Desktop Right — CTA only */}
+            <div className="hidden md:flex items-center">
               <Link
                 href="#find-os"
                 className="bg-signal-orange text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:bg-orange-hover transition-colors duration-200"
@@ -151,8 +224,9 @@ export default function Navigation() {
 
             {/* Mobile Hamburger */}
             <button
+              ref={hamburgerRef}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-black hover:text-secondary transition-colors duration-200"
+              className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-black hover:text-secondary transition-colors duration-200"
               aria-label={mobileMenuOpen ? "Luk menu" : "Åbn menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -176,34 +250,60 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         <div
+          ref={mobileMenuRef}
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-warm-grey-dark ${
-            mobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+            mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-6 py-6 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-base text-secondary hover:text-black transition-colors duration-200 py-3"
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            {/* Mobile Social */}
-            <div className="flex items-center gap-3 pt-4 text-secondary">
-              <a href="https://instagram.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-1.5 hover:text-signal-orange transition-colors">
-                <InstagramIcon />
-              </a>
-              <a href="https://facebook.com/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-1.5 hover:text-signal-orange transition-colors">
-                <FacebookIcon />
-              </a>
-              <a href="https://linkedin.com/company/emsenergi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-1.5 hover:text-signal-orange transition-colors">
-                <LinkedInIcon />
-              </a>
-            </div>
+            {navLinks.map((link) =>
+              link.children ? (
+                <div key={link.label}>
+                  <button
+                    type="button"
+                    onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                    className="flex w-full items-center justify-between text-base text-secondary hover:text-black transition-colors duration-200 py-3"
+                  >
+                    {link.label}
+                    <ChevronDown
+                      className={`transition-transform duration-300 ${
+                        mobileDropdownOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+                      mobileDropdownOpen ? "max-h-60" : "max-h-0"
+                    }`}
+                  >
+                    <div className="pl-4 space-y-1">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setMobileDropdownOpen(false);
+                          }}
+                          className="block text-sm text-secondary hover:text-black transition-colors duration-200 py-2.5"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base text-secondary hover:text-black transition-colors duration-200 py-3"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
 
             <div className="pt-4">
               <Link
