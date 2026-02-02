@@ -95,7 +95,7 @@ export default function RootLayout({
               ],
               priceRange: "$$",
               sameAs: [
-                "https://www.instagram.com/emsenergi",
+                "https://www.instagram.com/emsenergikbh/?utm_source=ig_web_button_share_sheet",
                 "https://www.facebook.com/emsenergi",
               ],
             }),

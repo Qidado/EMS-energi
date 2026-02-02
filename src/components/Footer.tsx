@@ -150,7 +150,7 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-1">
                 <a
-                  href="https://instagram.com/emsenergi"
+                  href="https://www.instagram.com/emsenergikbh/?utm_source=ig_web_button_share_sheet"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-white/70 hover:text-navy transition-colors duration-200"
