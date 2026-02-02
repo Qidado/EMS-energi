@@ -29,7 +29,7 @@ export default function BookingPage() {
     <>
       <Navigation />
 
-      <main id="main-content">
+      <main id="main-content" className="pt-28 sm:pt-32 md:pt-40">
         {/* Intro */}
         <section className="bg-off-white py-10 md:py-14">
           <div className="text-center max-w-xl mx-auto px-6">

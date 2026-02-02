@@ -85,31 +85,37 @@ const whyEms = [
 const personas = [
   {
     icon: "Briefcase" as const,
+    slug: "den-travle-professionelle",
     title: "Den travle professionelle",
     body: "Du har 45 minutter mellem møder — ikke 2 timer i et fitnesscenter. EMS giver effektiv træning på minimal tid.",
   },
   {
     icon: "Activity" as const,
+    slug: "atleten-der-vil-mere",
     title: "Atleten der vil mere",
     body: "Supplement til din eksisterende træning. Aktivér muskelgrupper din normale rutine ikke rammer.",
   },
   {
     icon: "Heart" as const,
+    slug: "genoptraening",
     title: "Genoptræning",
     body: "Skånsom træning efter skader. EMS belaster ikke led og bruges af fysioterapeuter til rehabilitering.",
   },
   {
     icon: "Sprout" as const,
+    slug: "nybegynderen",
     title: "Nybegynderen",
     body: "Aldrig trænet seriøst? Vi tilpasser intensiteten til dig. Ingen forkundskaber nødvendige.",
   },
   {
     icon: "RefreshCw" as const,
+    slug: "tilbage-i-form",
     title: "Tilbage i form",
     body: "Lang pause fra træning? EMS kickstarter din krop uden at overbelaste den.",
   },
   {
     icon: "Baby" as const,
+    slug: "efterfoedselstraening",
     title: "Efterfødselstræning",
     body: "Genopbyg din core og bækkenbund skånsomt efter fødslen. EMS er ideel til travle mødre — effektiv træning på kun 20 minutter.",
   },
@@ -261,7 +267,7 @@ export default function Home() {
     <>
       <Navigation />
 
-      <main id="main-content">
+      <main id="main-content" className="pt-28 sm:pt-32 md:pt-40">
         {/* ──────────────────────────────────────────────
             1. Hero Section
         ────────────────────────────────────────────── */}
@@ -393,7 +399,10 @@ export default function Home() {
                 const IconComponent = personaIcons[persona.icon];
                 return (
                   <ScrollReveal key={persona.title} delay={index * 100}>
-                    <div className="rounded-xl border border-navy/[0.06] bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                    <Link
+                      href={`/${persona.slug}`}
+                      className="block rounded-xl border border-navy/[0.06] bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                    >
                       <IconComponent className="h-6 w-6 text-navy" strokeWidth={1.5} />
                       <h3 className="mt-4 font-serif text-lg text-navy">
                         {persona.title}
@@ -401,103 +410,13 @@ export default function Home() {
                       <p className="mt-2 text-sm leading-relaxed text-slate">
                         {persona.body}
                       </p>
-                    </div>
+                      <span className="mt-4 inline-flex items-center text-sm font-medium text-navy">
+                        L&aelig;s mere &rarr;
+                      </span>
+                    </Link>
                   </ScrollReveal>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* ──────────────────────────────────────────────
-            3b. Efterfødselstræning Section
-        ────────────────────────────────────────────── */}
-        <section id="efterfoedselstraening" className="bg-off-white py-12 sm:py-16 md:py-24">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="grid items-start gap-8 md:gap-16 md:grid-cols-2">
-              <ScrollReveal>
-                <span className="text-sm uppercase tracking-widest text-navy">
-                  Efterf&oslash;dselstr&aelig;ning
-                </span>
-                <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-navy">
-                  Tilbage i form efter f&oslash;dslen
-                </h2>
-                <p className="mt-6 leading-relaxed text-slate">
-                  Din krop har gennemg&aring;et en enorm forandring. EMS tr&aelig;ning
-                  er en sk&aring;nsom og effektiv m&aring;de at genopbygge styrke
-                  p&aring; — uden at belaste led, ryg eller b&aelig;kkenbund.
-                </p>
-
-                {/* Challenges */}
-                <h3 className="mt-6 font-serif text-lg text-navy">Typiske udfordringer</h3>
-                <ul className="mt-3 space-y-2">
-                  {[
-                    "Svækket core og bækkenbund",
-                    "Ryg- og nakkesmerter fra amning",
-                    "Manglende tid til traditionel træning",
-                    "Usikkerhed om hvornår kroppen er klar",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-slate">
-                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy/40" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Benefits */}
-                <h3 className="mt-6 font-serif text-lg text-navy">Hvad EMS kan g&oslash;re</h3>
-                <ul className="mt-3 space-y-2">
-                  {[
-                    "Genaktivér dybe core-muskler skånsomt",
-                    "Styrk bækkenbunden uden hård belastning",
-                    "Fuld træning på kun 20 minutter",
-                    "Personlig tilpasning til dit niveau",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-slate">
-                      <span className="mt-0.5 text-navy">&#10003;</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Medical advisory */}
-                <div className="mt-6 rounded-lg bg-baby-blue/50 p-4">
-                  <p className="text-sm leading-relaxed text-slate">
-                    Vi anbefaler at vente til 6&ndash;8 uger efter f&oslash;dslen
-                    f&oslash;r du starter EMS tr&aelig;ning. Ved kejsersnit b&oslash;r
-                    du have din l&aelig;ges godkendelse f&oslash;rst.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                {/* Image placeholder */}
-                <div className="flex aspect-[4/3] items-center justify-center rounded-xl bg-baby-blue">
-                  <span className="font-serif text-xl text-slate">
-                    Efterf&oslash;dselstr&aelig;ning billede
-                  </span>
-                </div>
-
-                {/* Mødregruppe card */}
-                <div className="mt-6 rounded-xl border border-navy/[0.06] bg-white p-6">
-                  <h3 className="font-serif text-lg text-navy">M&oslash;dregruppe</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate">
-                    Vi tilbyder ogs&aring; m&oslash;dregruppe forl&oslash;b — tr&aelig;n
-                    sammen med andre nybagte m&oslash;dre i et fast 8-ugers program.
-                    Kontakt os for mere information.
-                  </p>
-                </div>
-
-                {/* CTA */}
-                <div className="mt-6">
-                  <Link
-                    href="/booking"
-                    className="inline-block w-full sm:w-auto text-center rounded-lg bg-navy px-8 py-4 font-medium text-white transition-all hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5"
-                  >
-                    Book din f&oslash;rste session &rarr;
-                  </Link>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </section>
