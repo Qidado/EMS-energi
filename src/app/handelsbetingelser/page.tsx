@@ -53,8 +53,8 @@ export default function HandelsbetingelserPage() {
               </h2>
               <p>
                 Alle priser er angivet i danske kroner (DKK) inklusive moms.
-                M&aring;nedsmedlemskaber betales forud hver m&aring;ned via
-                betalingskort. Klippekort betales ved k&oslash;b.
+                Medlemskaber l&oslash;ber automatisk fra m&aring;ned til
+                m&aring;ned og betales forud via betalingskort.
               </p>
               <p className="mt-2">
                 EMS Energi forbeholder sig retten til at justere priser med
@@ -67,27 +67,22 @@ export default function HandelsbetingelserPage() {
                 4. Opsigelse
               </h2>
               <p>
-                M&aring;nedsmedlemskaber kan opsiges l&oslash;bende med 30 dages
-                varsel til udgangen af en betalingsperiode. Opsigelse kan ske
-                skriftligt via e-mail til info@emsenergi.dk eller personligt i
-                studiet.
-              </p>
-              <p className="mt-2">
-                Klippekort er gyldige i den angivne periode og kan ikke
-                refunderes efter k&oslash;b.
+                Du kan opsige n&aring;r som helst. Opsigelsesfristen er
+                indev&aelig;rende m&aring;ned + &eacute;n m&aring;ned.
+                Opsigelse kan ske skriftligt via e-mail til info@emsenergi.dk
+                eller personligt i studiet.
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-xl text-black mb-3">
-                5. Booking og afbestilling
+                5. Booking og udeblivelser
               </h2>
               <p>
-                Tr&aelig;ninger bookes via vores bookingsystem. Afbestilling
-                skal ske senest 12 timer f&oslash;r sessionens start. Ved
-                manglende afbestilling eller udeblivelse t&aelig;ller sessionen
-                som brugt for klippekort, og der kan p&aring;l&aelig;gges et
-                gebyr for m&aring;nedsmedlemmer.
+                Tr&aelig;ninger bookes via vores bookingsystem.
+                Bliver du v&aelig;k fra en booket tr&aelig;ning, opkr&aelig;ves
+                et gebyr p&aring; 75 kr. Gebyret g&aelig;lder kun bookede
+                pladser &mdash; ikke venteliste.
               </p>
             </section>
 
