@@ -12,6 +12,9 @@ import {
   Sprout,
   RefreshCw,
   Baby,
+  Clock,
+  Droplets,
+  Users,
 } from "lucide-react";
 
 const personaIcons = {
@@ -126,7 +129,7 @@ const steps = [
     number: "01",
     title: "Ankomst",
     subtitle: "2 min",
-    body: "Vi byder dig velkommen og udleverer din EMS-dragt. Dragten sidder tæt for optimal kontakt med elektroderne.",
+    body: "Mød gerne op 5 minutter før — så er du klar i dragten, når træningen starter. Vi byder dig velkommen og udleverer din EMS-dragt. Dragten sidder tæt for optimal kontakt med elektroderne.",
   },
   {
     number: "02",
@@ -211,7 +214,12 @@ const faqItems = [
   {
     question: "Hvad skal jeg medbringe?",
     answer:
-      "Ingenting. Vi stiller træningstøj til rådighed. Du træner barfodet. Medbring gerne vand.",
+      "Ingenting — vi stiller træningstøj til rådighed og du træner barfodet. Medbring gerne en vandflaske, så du kan drikke godt med vand før og efter træningen.",
+  },
+  {
+    question: "Hvad skal jeg gøre før min træning?",
+    answer:
+      "Drik godt med vand i løbet af dagen — god hydrering giver bedre muskelrespons under EMS. Mød gerne op 5 minutter før din session, så du er klar i dragten når træningen starter.",
   },
   {
     question: "Gør det ondt?",
@@ -496,6 +504,36 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
+            {/* Practical tips */}
+            <ScrollReveal className="mx-auto mt-12 max-w-3xl">
+              <div className="grid gap-4 sm:grid-cols-3">
+                {[
+                  {
+                    icon: Clock,
+                    text: "Mød 5 min før — Så du er klar i dragten når træningen starter",
+                  },
+                  {
+                    icon: Droplets,
+                    text: "Drik godt med vand — Både før og efter træning",
+                  },
+                  {
+                    icon: Users,
+                    text: "Max 2 per session — Du får personlig vejledning hele vejen",
+                  },
+                ].map((tip) => (
+                  <div
+                    key={tip.text}
+                    className="flex items-start gap-3 rounded-xl bg-white/60 p-4"
+                  >
+                    <tip.icon className="mt-0.5 h-5 w-5 shrink-0 text-navy" />
+                    <p className="text-sm leading-relaxed text-slate">
+                      {tip.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
 
             <ScrollReveal className="mt-16 text-center">
               <Link
