@@ -562,7 +562,7 @@ export default function Virksomheder() {
               <div className="mt-10">
                 <Link
                   href="#kontakt-form"
-                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-white px-10 py-4 text-lg font-medium text-forest-green transition-all hover:shadow-lg hover:scale-105"
+                  className="inline-block w-full sm:w-auto text-center rounded-lg bg-white px-10 py-4 text-lg font-medium text-forest-green transition-all hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Kontakt os i dag
                 </Link>

@@ -142,17 +142,17 @@ const steps = [
 
 const trainers = [
   {
-    name: "[Instruktør Navn]",
+    name: "Instruktør 1",
     role: "Chefinstruktør",
     bio: "Certificeret EMS-instruktør med X års erfaring. Fokus på at finde den rette intensitet til hver enkelt.",
   },
   {
-    name: "[Instruktør Navn]",
+    name: "Instruktør 2",
     role: "Instruktør",
     bio: "Baggrund i sportsvidenskab. Speciale i genoptræning og skånsom træning.",
   },
   {
-    name: "[Instruktør Navn]",
+    name: "Instruktør 3",
     role: "Instruktør",
     bio: "Tidligere personlig træner. Fokus på præstationsoptimering og atlettræning.",
   },
@@ -301,7 +301,7 @@ export default function Home() {
                   <div className="mt-8">
                     <Link
                       href="#find-os"
-                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-signal-orange px-8 py-4 font-medium text-white transition-colors hover:bg-orange-hover"
+                      className="inline-block w-full sm:w-auto text-center rounded-lg bg-signal-orange px-8 py-4 font-medium text-white transition-all hover:bg-orange-hover hover:shadow-lg hover:-translate-y-0.5"
                     >
                       Book Gratis Pr&oslash;vetr&aelig;ning
                     </Link>

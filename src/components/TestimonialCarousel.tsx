@@ -153,7 +153,7 @@ export default function TestimonialCarousel() {
         <button
           onClick={goPrev}
           aria-label="Forrige udtalelse"
-          className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-warm-stone/20 hover:bg-signal-orange hover:text-white hover:border-signal-orange transition-all duration-200"
+          className="hidden md:flex absolute -left-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-warm-grey-dark/30 hover:bg-signal-orange hover:text-white hover:border-signal-orange transition-all duration-200"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -162,7 +162,7 @@ export default function TestimonialCarousel() {
         <button
           onClick={goNext}
           aria-label="Næste udtalelse"
-          className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-warm-stone/20 hover:bg-signal-orange hover:text-white hover:border-signal-orange transition-all duration-200"
+          className="hidden md:flex absolute -right-14 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white/80 border border-warm-grey-dark/30 hover:bg-signal-orange hover:text-white hover:border-signal-orange transition-all duration-200"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -220,7 +220,7 @@ export default function TestimonialCarousel() {
               className={`rounded-full transition-all duration-300 ${
                 index === active
                   ? "bg-signal-orange w-2.5 h-2.5"
-                  : "bg-warm-stone/40 w-2.5 h-2.5 hover:bg-warm-stone/60"
+                  : "bg-warm-grey-dark/40 w-2.5 h-2.5 hover:bg-warm-grey-dark/60"
               }`}
             />
           </button>

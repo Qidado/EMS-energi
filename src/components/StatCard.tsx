@@ -23,7 +23,7 @@ export default function StatCard({
 }: StatCardProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-lg border border-gray-200 bg-white ${className}`}
+      className={`relative overflow-hidden rounded-xl border border-gray-200 bg-white ${className}`}
     >
       {/* Top accent border */}
       <div

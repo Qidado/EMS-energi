@@ -28,13 +28,13 @@ const navLinks: NavItem[] = [
     label: "Om Os",
     children: [
       { href: "/om-os", label: "Vores historie" },
-      { href: "/om-os#team", label: "Mød teamet" },
+      { href: "/#team", label: "Mød teamet" },
       { href: "#hvad-er-ems", label: "Hvad er EMS?" },
     ],
   },
-  { href: "/priser", label: "Priser" },
+  { href: "/#priser", label: "Priser" },
   { href: "/virksomheder", label: "For Virksomheder" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/#find-os", label: "Kontakt" },
 ];
 
 /* ============================================
