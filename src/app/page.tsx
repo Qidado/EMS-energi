@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import FaqAccordion from "@/components/FaqAccordion";
+import PricingTabs from "@/components/PricingTabs";
 import Link from "next/link";
 import {
   Briefcase,
@@ -196,6 +197,44 @@ const pricingPlans = [
       "Løbende månedligt",
     ],
     cta: "Kom I Gang",
+    featured: false,
+  },
+];
+
+const klippekortPlans = [
+  {
+    klip: 4,
+    price: "1.000 kr",
+    pricePerSession: "250 kr pr. session",
+    validity: "3 måneders gyldighed",
+    featured: false,
+  },
+  {
+    klip: 8,
+    price: "1.800 kr",
+    pricePerSession: "225 kr pr. session",
+    validity: "6 måneders gyldighed",
+    featured: false,
+  },
+  {
+    klip: 12,
+    price: "2.400 kr",
+    pricePerSession: "200 kr pr. session",
+    validity: "8 måneders gyldighed",
+    featured: false,
+  },
+  {
+    klip: 16,
+    price: "2.800 kr",
+    pricePerSession: "175 kr pr. session",
+    validity: "12 måneders gyldighed",
+    featured: true,
+  },
+  {
+    klip: 50,
+    price: "8.000 kr",
+    pricePerSession: "160 kr pr. session",
+    validity: "12 måneders gyldighed",
     featured: false,
   },
 ];
@@ -569,85 +608,21 @@ export default function Home() {
             <ScrollReveal>
               <div className="text-center">
                 <span className="text-xs font-medium uppercase tracking-[0.2em] text-navy">
-                  Medlemskab
+                  Priser
                 </span>
                 <h2 className="mt-4 font-serif text-4xl text-navy">
                   V&aelig;lg den rette plan
                 </h2>
+                <p className="mt-4 text-slate">
+                  Fast m&aring;nedligt medlemskab eller fleksibelt klippekort &mdash; du v&aelig;lger.
+                </p>
               </div>
             </ScrollReveal>
 
-            <div className="mt-16 grid items-stretch gap-8 md:grid-cols-3">
-              {pricingPlans.map((plan, index) => (
-                <ScrollReveal key={plan.name} delay={index * 120} className="h-full">
-                  <div
-                    className={`relative flex h-full flex-col rounded-xl bg-white p-5 sm:p-6 md:p-8 ${
-                      plan.featured
-                        ? "border-2 border-navy shadow-lg mt-6 sm:mt-0"
-                        : "border-2 border-border-medium"
-                    }`}
-                  >
-                    {/* Featured badge */}
-                    {plan.featured && (
-                      <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <span className="rounded-full bg-navy px-5 py-1.5 text-sm text-white">
-                          Mest Popul&aelig;r
-                        </span>
-                      </div>
-                    )}
-
-                    {/* Plan name */}
-                    <h3 className="font-serif text-2xl text-navy">
-                      {plan.name}
-                    </h3>
-                    {plan.subtitle && (
-                      <p className="mt-1 text-sm text-slate">
-                        {plan.subtitle}
-                      </p>
-                    )}
-
-                    {/* Price */}
-                    <div className="mt-4 flex items-baseline gap-1">
-                      <span className="font-serif text-4xl text-navy">
-                        {plan.price}
-                      </span>
-                      {plan.priceSuffix && (
-                        <span className="text-slate">{plan.priceSuffix}</span>
-                      )}
-                    </div>
-
-                    {/* Description */}
-                    <p className="mt-3 leading-relaxed text-slate">
-                      {plan.description}
-                    </p>
-
-                    {/* Features */}
-                    <ul className="mt-6 space-y-3">
-                      {plan.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-3">
-                          <span className="mt-0.5 text-navy">&#10003;</span>
-                          <span className="text-navy">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA */}
-                    <div className="mt-auto pt-8">
-                      <Link
-                        href="/booking"
-                        className={`block w-full rounded-lg py-3 text-center font-medium transition ${
-                          plan.featured
-                            ? "bg-navy text-white hover:bg-navy-light"
-                            : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
-                        }`}
-                      >
-                        {plan.cta}
-                      </Link>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+            <PricingTabs
+              medlemskabPlans={pricingPlans}
+              klippekortPlans={klippekortPlans}
+            />
 
             <p className="mt-8 text-center text-sm text-slate">
               Alle priser er inkl. moms.
