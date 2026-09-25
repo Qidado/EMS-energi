@@ -233,26 +233,25 @@ export default function Footer() {
                 </p>
                 <p>
                   <a
-                    href="tel:+4531425364"
+                    href="tel:+4560169080"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    📞 +45 31 42 53 64
+                    📞 +45 60 16 90 80
                   </a>
                 </p>
                 <p>
                   <a
-                    href="mailto:info@emsenergi.dk"
+                    href="mailto:emsenergikbh@gmail.com"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    ✉️ info@emsenergi.dk
+                    ✉️ emsenergikbh@gmail.com
                   </a>
                 </p>
                 <div className="pt-2">
                   <p className="text-white text-xs font-medium uppercase tracking-wider mb-1">
                     &Aring;bningstider
                   </p>
-                  <p>Man&ndash;Fre: 06:30&ndash;21:00</p>
-                  <p>L&oslash;r&ndash;S&oslash;n: 08:00&ndash;18:00</p>
+                  <p>&Aring;ben efter aftale</p>
                 </div>
               </div>
             </AccordionColumn>

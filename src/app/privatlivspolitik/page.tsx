@@ -35,8 +35,8 @@ export default function PrivatlivspolitikPage() {
               </p>
               <ul className="mt-2 list-disc pl-6 space-y-1">
                 <li>EMS energi ApS, Nordre Frihavnsgade 65, kl. tv, 2100 &Oslash;sterbro</li>
-                <li>E-mail: info@emsenergi.dk</li>
-                <li>Telefon: +45 31 42 53 64</li>
+                <li>E-mail: emsenergikbh@gmail.com</li>
+                <li>Telefon: +45 60 16 90 80</li>
               </ul>
             </section>
 
@@ -107,7 +107,7 @@ export default function PrivatlivspolitikPage() {
                 <li>Indsigelse mod behandlingen</li>
               </ul>
               <p className="mt-2">
-                Kontakt os p&aring; info@emsenergi.dk for at ud&oslash;ve dine
+                Kontakt os p&aring; emsenergikbh@gmail.com for at ud&oslash;ve dine
                 rettigheder. Du kan ogs&aring; klage til Datatilsynet.
               </p>
             </section>

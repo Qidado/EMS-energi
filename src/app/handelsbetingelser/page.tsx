@@ -69,7 +69,7 @@ export default function HandelsbetingelserPage() {
               <p>
                 Du kan opsige n&aring;r som helst. Opsigelsesfristen er
                 indev&aelig;rende m&aring;ned + &eacute;n m&aring;ned.
-                Opsigelse kan ske skriftligt via e-mail til info@emsenergi.dk
+                Opsigelse kan ske skriftligt via e-mail til emsenergikbh@gmail.com
                 eller personligt i studiet.
               </p>
             </section>
@@ -127,7 +127,7 @@ export default function HandelsbetingelserPage() {
                 9. Klageadgang
               </h2>
               <p>
-                Klager kan rettes til EMS Energi p&aring; info@emsenergi.dk.
+                Klager kan rettes til EMS Energi p&aring; emsenergikbh@gmail.com.
                 Kan vi ikke finde en l&oslash;sning, kan du klage til
                 N&aelig;vn enes Hus eller EU-Kommissionens onlineklageportal.
               </p>

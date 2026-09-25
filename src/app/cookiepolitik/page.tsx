@@ -111,7 +111,7 @@ export default function CookiepolitikPage() {
               </h2>
               <p>
                 Har du sp&oslash;rgsm&aring;l til vores brug af cookies, er du
-                velkommen til at kontakte os p&aring; info@emsenergi.dk.
+                velkommen til at kontakte os p&aring; emsenergikbh@gmail.com.
               </p>
             </section>
           </div>
