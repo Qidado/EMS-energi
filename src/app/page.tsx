@@ -704,16 +704,15 @@ export default function Home() {
                   <div>
                     <h3 className="font-serif text-xl text-navy mb-2">Kontakt</h3>
                     <p className="text-slate leading-relaxed">
-                      <a href="tel:+4531425364" className="hover:text-navy transition-colors">+45 31 42 53 64</a><br />
-                      <a href="mailto:info@emsenergi.dk" className="hover:text-navy transition-colors">info@emsenergi.dk</a>
+                      <a href="tel:+4560169080" className="hover:text-navy transition-colors">+45 60 16 90 80</a><br />
+                      <a href="mailto:emsenergikbh@gmail.com" className="hover:text-navy transition-colors">emsenergikbh@gmail.com</a>
                     </p>
                   </div>
 
                   <div>
                     <h3 className="font-serif text-xl text-navy mb-2">&Aring;bningstider</h3>
                     <p className="text-slate leading-relaxed">
-                      Man&ndash;Fre 06:30&ndash;21:00<br />
-                      L&oslash;r&ndash;S&oslash;n 08:00&ndash;18:00
+                      &Aring;ben efter aftale
                     </p>
                   </div>
                 </div>

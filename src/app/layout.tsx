@@ -59,8 +59,8 @@ export default function RootLayout({
               description:
                 "EMS træningsstudie på Østerbro, København. 20 minutters effektiv helkropstræning med elektrisk muskelstimulation.",
               url: "https://emsenergi.dk",
-              telephone: "+4531425364",
-              email: "info@emsenergi.dk",
+              telephone: "+4560169080",
+              email: "emsenergikbh@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Nordre Frihavnsgade 65, kl. tv",
@@ -73,26 +73,6 @@ export default function RootLayout({
                 latitude: 55.7020,
                 longitude: 12.5870,
               },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
-                  opens: "06:30",
-                  closes: "21:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Saturday", "Sunday"],
-                  opens: "08:00",
-                  closes: "18:00",
-                },
-              ],
               priceRange: "$$",
               sameAs: [
                 "https://www.instagram.com/emsenergikbh/?utm_source=ig_web_button_share_sheet",
